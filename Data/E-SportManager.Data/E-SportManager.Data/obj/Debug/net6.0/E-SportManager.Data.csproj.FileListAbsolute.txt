@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Data.deps.json
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Data.dll
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Data.pdb
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Data.Models.dll
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Data.Models.pdb
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\E-SportManager.Data.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\E-SportManager.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\E-SportManager.Data.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\E-SportManager.Data.AssemblyInfo.cs
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\E-SportManager.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\E-SportManager.Data.csproj.CopyComplete
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\E-SportManager.Data.dll
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\refint\E-SportManager.Data.dll
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\E-SportManager.Data.pdb
+C:\Users\User\Desktop\Interview\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\ref\E-SportManager.Data.dll
