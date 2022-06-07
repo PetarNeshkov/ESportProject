@@ -10,3 +10,15 @@ C:\Users\User\Desktop\Interview\Data\E-SportManager.Data.Models\obj\Debug\net6.0
 C:\Users\User\Desktop\Interview\Data\E-SportManager.Data.Models\obj\Debug\net6.0\refint\E-SportManager.Data.Models.dll
 C:\Users\User\Desktop\Interview\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.pdb
 C:\Users\User\Desktop\Interview\Data\E-SportManager.Data.Models\obj\Debug\net6.0\ref\E-SportManager.Data.Models.dll
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\bin\Debug\net6.0\E-SportManager.Data.Models.deps.json
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\bin\Debug\net6.0\E-SportManager.Data.Models.dll
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\bin\Debug\net6.0\E-SportManager.Data.Models.pdb
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.AssemblyInfo.cs
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.dll
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\refint\E-SportManager.Data.Models.dll
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.pdb
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\ref\E-SportManager.Data.Models.dll

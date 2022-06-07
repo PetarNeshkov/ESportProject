@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ptCcN3d6fCPs+JcJOPqqkSWlfBv3GKYkQmRveLGEKEo=",
+  "Hash": "XRfKHUoJ7NO7DHbhRzE1mPnQVmWWDxp2zVw66BUaBww=",
   "Source": "E-SportManager.Web",
   "BasePath": "_content/E-SportManager.Web",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\E-SportManager.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\E-SportManager.Web.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\E-SportManager.Web\\wwwroot\\css\\addPlayer.css",
+      "SourceId": "E-SportManager.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\E-SportManager.Web\\wwwroot\\",
+      "BasePath": "_content/E-SportManager.Web",
+      "RelativePath": "css/addPlayer.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\addPlayer.css"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\E-SportManager.Web\\wwwroot\\css\\site.css",
