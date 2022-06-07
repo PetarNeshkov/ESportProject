@@ -38,7 +38,7 @@
         </div>
        <div class="form-group mt-3">
             <label asp-for="Role">Role</label>
-            <select asp-for="Role" class="form-control"  id="role-input" aria-label="Select a role">
+            <select asp-for="Role" id="role-input" placeholder="Select a role">
                 @foreach(var role in Enum.GetValues(typeof(Role)))
                 {
                     <option>@role</option>
@@ -47,7 +47,7 @@
         </div>
         <div class="form-group mt-3">
             <label asp-for="Division">Division</label>
-            <select asp-for="Division" class="form-control" id="division-input" aria-label="Select a division">
+            <select asp-for="Division" id="division-input" placeholder="Select a division">
                 @foreach(var division in Enum.GetValues(typeof(Division)))
                 {
                     <option>@division</option>
@@ -72,4 +72,5 @@
     <partial name="_ValidationScriptsPartial" />
 
     <script src="~/js/addForm.js"></script>
+    <script src="~/lib/selectize/selectize.js"></script>
 }

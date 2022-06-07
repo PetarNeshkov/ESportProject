@@ -20,10 +20,10 @@ $("#image-input").focusout(function () {
     }
 })
 
-$("#role-input").focusout(function () {
+$("#role-input").change(function () {
     $('#player-role').text($("#role-input").val());
 })
 
-$("#division-input").focusout(function () {
+$("#division-input").change(function () {
     $('#player-division').text($("#division-input").val());
 })
