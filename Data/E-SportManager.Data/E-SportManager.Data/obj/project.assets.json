@@ -657,9 +657,22 @@
           }
         }
       },
+      "E-SportManager.Data.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/E-SportManager.Data.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E-SportManager.Data.Common.dll": {}
+        }
+      },
       "E-SportManager.Data.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "E-SportManager.Data.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/E-SportManager.Data.Models.dll": {}
         },
@@ -1921,6 +1934,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "E-SportManager.Data.Common/1.0.0": {
+      "type": "project",
+      "path": "../../E-SportManager.Data.Common/E-SportManager.Data.Common.csproj",
+      "msbuildProject": "../../E-SportManager.Data.Common/E-SportManager.Data.Common.csproj"
     },
     "E-SportManager.Data.Models/1.0.0": {
       "type": "project",

@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "E-SportManager.Data.Models/1.0.0": {
+        "dependencies": {
+          "E-SportManager.Data.Common": "1.0.0"
+        },
         "runtime": {
           "E-SportManager.Data.Models.dll": {}
+        }
+      },
+      "E-SportManager.Data.Common/1.0.0": {
+        "runtime": {
+          "E-SportManager.Data.Common.dll": {}
         }
       }
     }
   },
   "libraries": {
     "E-SportManager.Data.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "E-SportManager.Data.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

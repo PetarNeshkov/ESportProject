@@ -22,3 +22,6 @@ C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\ob
 C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\refint\E-SportManager.Data.Models.dll
 C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.pdb
 C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\ref\E-SportManager.Data.Models.dll
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\bin\Debug\net6.0\E-SportManager.Data.Common.dll
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\bin\Debug\net6.0\E-SportManager.Data.Common.pdb
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data.Models\obj\Debug\net6.0\E-SportManager.Data.Models.csproj.CopyComplete

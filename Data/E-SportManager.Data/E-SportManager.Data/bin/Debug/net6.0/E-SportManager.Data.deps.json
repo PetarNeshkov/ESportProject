@@ -515,7 +515,15 @@
           }
         }
       },
+      "E-SportManager.Data.Common/1.0.0": {
+        "runtime": {
+          "E-SportManager.Data.Common.dll": {}
+        }
+      },
       "E-SportManager.Data.Models/1.0.0": {
+        "dependencies": {
+          "E-SportManager.Data.Common": "1.0.0"
+        },
         "runtime": {
           "E-SportManager.Data.Models.dll": {}
         }
@@ -842,6 +850,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "E-SportManager.Data.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "E-SportManager.Data.Models/1.0.0": {
       "type": "project",
