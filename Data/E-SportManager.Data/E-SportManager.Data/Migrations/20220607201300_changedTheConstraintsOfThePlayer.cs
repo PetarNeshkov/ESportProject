@@ -19,8 +19,8 @@ namespace E_SportManager.Data.Migrations
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
                 table: "Players",
-                type: "nvarchar(30)",
-                maxLength: 30,
+                type: "nvarchar(1500)",
+                maxLength: 1500,
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "nvarchar(max)");
@@ -37,8 +37,8 @@ namespace E_SportManager.Data.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "Description",
                 table: "Players",
-                type: "nvarchar(30)",
-                maxLength: 30,
+                type: "nvarchar(1500)",
+                maxLength: 1500,
                 nullable: false,
                 defaultValue: "");
         }

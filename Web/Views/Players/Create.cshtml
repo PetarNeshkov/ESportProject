@@ -13,8 +13,7 @@
              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
              class="player-img-top img-fluid player-image">
         <div class="player-body">
-            <h5 id="player-name" class="player-title text-center mt-3" data-toggle="tooltip" 
-                title="Description:<br>Placeholder.">
+            <h5 id="player-name" class="player-title text-center mt-3" data-toggle="tooltip">
                 Empty Name
             </h5>
             <ul class="list-group list-group-flush">
@@ -36,7 +35,7 @@
             <input asp-for="ImageUrl" type="text" class="form-control" id="image-input">
             <span asp-validation-for="ImageUrl" class="text-danger"></span>
         </div>
-       <div class="form-group mt-3">
+        <div class="form-group mt-3">
             <label asp-for="Role">Role</label>
             <select asp-for="Role" id="role-input" placeholder="Select a role">
                 @foreach(var role in Enum.GetValues(typeof(Role)))
@@ -44,7 +43,6 @@
                     <option>@role</option>
                 }
             </select>
-        </div>
         <div class="form-group mt-3">
             <label asp-for="Division">Division</label>
             <select asp-for="Division" id="division-input" placeholder="Select a division">
@@ -53,6 +51,7 @@
                     <option>@division</option>
                 }
             </select>
+        </div>
         </div>
         <div class="form-group mt-3">
             <label asp-for="YearsOfExperience">Years of experience</label>
@@ -72,5 +71,5 @@
     <partial name="_ValidationScriptsPartial" />
 
     <script src="~/js/addForm.js"></script>
-    <script src="~/lib/selectize/selectize.js"></script>
+    <script src="~/js/selectize.js"></script>
 }

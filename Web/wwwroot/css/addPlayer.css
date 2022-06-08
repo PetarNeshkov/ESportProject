@@ -4,11 +4,15 @@
     justify-content:center;
 }
 
+#description-input {
+    height: 150px;
+}
+
 .role {
     border: 2px crimson solid;
     padding-left: 10%;
     padding-right: 10%;
-    border-radius: 10%;  
+    border-radius: 10%;
     font-weight: bolder;
     font-size: large;
     color: crimson;
