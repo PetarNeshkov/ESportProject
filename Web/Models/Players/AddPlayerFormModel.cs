@@ -23,6 +23,10 @@ namespace E_SportManager.Models.Players
         [EnumDataType(typeof(Role))]
         public string Role { get; init; }
 
+        [Required]
+        [EnumDataType(typeof(Division))]
+        public string Division { get; init; }
+
         [Range(0, 50)]
         public int YearsOfExperience { get; init; }
 
@@ -33,8 +37,5 @@ namespace E_SportManager.Models.Players
             MinimumLength =PlayerDescriptionMinLength)]
         public string Description { get; init; }
 
-        [Required]
-        [EnumDataType(typeof(Division))]
-        public string Division { get; init; }
     }
 }

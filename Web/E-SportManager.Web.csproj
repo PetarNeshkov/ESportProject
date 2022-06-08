@@ -26,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Data\E-SportManager.Data\E-SportManager.Data\E-SportManager.Data.csproj" />
     <ProjectReference Include="..\GlobalConstants\E-SportManager.Common\E-SportManager.Common.csproj" />
+    <ProjectReference Include="..\Services\E-SportManager.Service.Data\E-SportManager.Service.Data.csproj" />
   </ItemGroup>
 
 </Project>

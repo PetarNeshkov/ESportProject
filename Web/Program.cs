@@ -15,6 +15,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ESportDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(MappingProfiler));
 
 var app = builder.Build();

@@ -10,7 +10,7 @@ $select.each(function () {
 
 var $select = $('#division-input').selectize({
     create: false,
-    sortField: 'text',
+    sortField: false
 });
 
 
