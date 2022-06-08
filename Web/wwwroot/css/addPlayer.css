@@ -4,18 +4,33 @@
     justify-content:center;
 }
 
+.players{
+    display:flex;
+    flex-wrap:nowrap;
+    gap:50px;
+}
+
 #description-input {
     height: 150px;
 }
 
 .role {
     border: 2px crimson solid;
+    color: crimson;
+}
+
+.role-all {
+    border: 4px grey solid;
+    color: cadetblue;
+}
+
+.role, .role-all {
+   
     padding-left: 10%;
     padding-right: 10%;
     border-radius: 10%;
     font-weight: bolder;
     font-size: large;
-    color: crimson;
     text-align: center
 }
 
@@ -24,13 +39,22 @@
 }
 
 .division {
-    border: 2px lightgreen solid;
+    border: 3px lightgreen solid;
+    color: lightgreen;
+}
+
+.division-all {
+    border: 4px grey solid;
+    color: cadetblue;
+}
+
+.division, .division-all {
+    
     padding-left: 10%;
     padding-right: 10%;
     border-radius: 10%;
     font-weight: bolder;
     font-size: large;
-    color: lightgreen;
     text-align: center
 }
 
@@ -38,9 +62,16 @@
     background-color: rgb(121, 143, 129);
 }
 
+
 .player-image {
-    transition: transform .3s;
+    transition: transform 0.3s ease 0s;
+    width: 300px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
+
 
 /*.player-image:hover {
     z-index: 1;
@@ -49,4 +80,30 @@
 
 .player:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#edit-btn {
+    background-color: #DF691A;
+    color:black;
+    float:left;
+}
+
+#edit-btn:hover,#delete-btn:hover,#details-btn:hover {
+    color: wheat;
+}
+
+#delete-btn {
+    background-color: red;
+    color: black;
+    float: right;
+}
+
+#details-btn {
+    background-color: green;
+    color: black;
+}
+
+#admin-btns{
+    display:flex;
+    gap:55px;
 }

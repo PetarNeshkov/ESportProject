@@ -50,11 +50,13 @@ namespace E_SportManager.Controllers
             return View(Create());
         }
 
-        public IActionResult All()
+        public async Task<IActionResult> All(AllPlayersQueryModel query)
         {
-            var players = playerService.GetAllPlayersAsync<PlayerServiceModel>();
+            var players =await playerService.GetAllPlayersAsync<PlayerServiceModel>();
 
-            return View(players);
+            query.Players = players;
+
+            return View(query);
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using E_SportManager.Data;
+using E_SportManager.Models.Players;
 
 namespace E_SportManager
 {
@@ -6,7 +8,7 @@ namespace E_SportManager
     {
         public MappingProfiler()
         {
-
+            CreateMap<Player, PlayerServiceModel>();
         }
     }
 }

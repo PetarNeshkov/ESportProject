@@ -1,0 +1,30 @@
+﻿@model AllPlayersQueryModel
+
+<link rel="stylesheet" href="/css/addPlayer.css">
+
+<h1 class="text-center mt-2 mb-5">All Players</h1>
+<div class="players">
+    @foreach (var player in Model.Players)
+    {
+        <div class="player col-6 col-lg-3">
+            <img src="@player.ImageUrl"
+             class="player-img-top img-fluid player-image">
+            <div class="player-body">
+                <h5 class="player-title text-center mt-3">@player.Name</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="items">
+                        <span id="player-role" class="role-all">@player.Role</span>
+                        <span id="player-division" class="division-all">@player.Division</span>
+                    </li>
+                </ul>
+                <div id="admin-btns">
+                    <button class="col-lg-5 btn btn-outline mb-1 mt-3 pl-3" id="edit-btn">Edit</button>
+                    <button class="col-lg-5 btn btn-outline mb-1 mt-3" id="delete-btn">Delete</button>
+                </div>
+                <button class="col-md-12 btn btn-outline mb-4 " id="details-btn">Details</button>
+            </div>
+        </div>
+    }
+</div>
+
+<script src="~/js/addForm.js"></script>
