@@ -1,17 +1,13 @@
-﻿using E_SportManager.Data.enums;
+﻿using E_SportManager.Data.Common.Models;
+using E_SportManager.Data.enums;
 using System.ComponentModel.DataAnnotations;
 
-using static E_SportManager.Data.Common.DataValidation;
 using static E_SportManager.Data.Common.DataValidation.Player;
 
 namespace E_SportManager.Data
 {
-    public class Player
+    public class Player:BaseModel<string>
     {
-        [Key]
-        [Required]
-        [MaxLength(IdMaxLength)]
-        public string Id { get; init; } = Guid.NewGuid().ToString();
 
         [Required]
         [MaxLength(PlayerNameMaxLength)]
@@ -31,6 +27,8 @@ namespace E_SportManager.Data
         [Required]
         [MaxLength(PlayerDescriptionMaxLength)]
         public string Description { get; set; }
+
+
 
     }
 }

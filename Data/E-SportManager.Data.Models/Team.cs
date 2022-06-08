@@ -1,16 +1,15 @@
 ﻿
+using E_SportManager.Data.Common.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace E_SportManager.Data
 {
-    public class Team
+    public class Team:BaseModel<string>
     {
         public Team()
         {
             Players=new HashSet<Player>();
         }
-
-        public string Id { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
         public string Title { get; set; }

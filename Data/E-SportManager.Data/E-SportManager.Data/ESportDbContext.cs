@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using YourMoviesForum.Data.Common.Models;
 
 namespace E_SportManager.Data
 {
@@ -14,13 +15,13 @@ namespace E_SportManager.Data
         public DbSet<Player> Players { get; init; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-           => SaveChangesAsync(cancellationToken);
-
+           => SaveChangesAsync(true, cancellationToken);
 
         public override Task<int> SaveChangesAsync(
             bool acceptAllChangesOnSuccess,
             CancellationToken cancellationToken = default)
         {
+            ApplyAuditforRules();
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 
@@ -40,6 +41,30 @@ namespace E_SportManager.Data
             foreach (var foreignKey in foreignKeys)
             {
                 foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+        }
+
+        //To apply abstractly DateTime everywhere with IAuditInfo when something is changed
+        private void ApplyAuditforRules()
+        {
+            var changedEntries = ChangeTracker
+                .Entries()
+                .Where(e =>
+                    e.Entity is IAuditInfo &&
+                    (e.State == EntityState.Added || e.State == EntityState.Modified));
+
+            foreach (var entry in changedEntries)
+            {
+                var entity = (IAuditInfo)entry.Entity;
+
+                if (entry.State == EntityState.Added && entity.CreatedOn == default)
+                {
+                    entity.CreatedOn = DateTime.UtcNow.ToLocalTime().ToString("dd/MM/yyyy H:mm");
+                }
+                else
+                {
+                    entity.ModifiedOn = DateTime.UtcNow.ToLocalTime().ToString("dd/MM/yyyy H:mm");
+                }
             }
         }
     }
