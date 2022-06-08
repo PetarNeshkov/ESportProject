@@ -6,5 +6,7 @@
             string role,string division,string description);
 
         Task<bool> IsExistingAsync(string name);
+
+        Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>();
     }
 }

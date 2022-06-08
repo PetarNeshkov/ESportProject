@@ -49,5 +49,12 @@ namespace E_SportManager.Controllers
 
             return View(Create());
         }
+
+        public IActionResult All()
+        {
+            var players = playerService.GetAllPlayersAsync<PlayerServiceModel>();
+
+            return View(players);
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using E_SportManager.Data;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using E_SportManager.Data;
 using E_SportManager.Data.enums;
 using E_SportManager.Service.Data.Players;
 using Microsoft.EntityFrameworkCore;
@@ -8,10 +10,12 @@ namespace E_SportManager.Service.Data
     public class PlayerService : IPlayerService
     {
         private readonly ESportDbContext data;
+        private readonly IMapper mapper;
 
-        public PlayerService(ESportDbContext data)
+        public PlayerService(ESportDbContext data,IMapper mapper)
         {
             this.data = data;
+            this.mapper = mapper;
         }
 
         public async Task CreatePlayerAsync(
@@ -36,7 +40,15 @@ namespace E_SportManager.Service.Data
             await data.SaveChangesAsync();
         }
 
+        public async Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>()
+            =>await data.Players
+                 .AsNoTracking()
+                 .OrderByDescending(p=>p.CreatedOn)
+                 .Where(p=>!p.IsDeleted)
+                 .ProjectTo<TModel>(mapper.ConfigurationProvider)
+                 .ToListAsync();
+
         public async Task<bool> IsExistingAsync(string name)
-            => await data.Players.AnyAsync(c => c.Name == name);
+            => await data.Players.AnyAsync(p => p.Name == name && !p.IsDeleted);
     }
 }
