@@ -9,5 +9,13 @@
             public const int PlayerDescriptionMinLength = 10;
             public const int PlayerDescriptionMaxLength = 1500;
         }
+
+        public static class User
+        {
+            public const int UserUsernameMaxLength = 30;
+            public const int UserUsernameMinLength = 4;
+            public const int UserPasswordMaxLength = 50;
+            public const int UserPasswordMinLength = 6;
+        }
     }
 }
