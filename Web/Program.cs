@@ -1,22 +1,19 @@
 using E_SportManager;
-using E_SportManager.Data;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ESportDbContext> (options =>
-    options.UseSqlServer(connectionString));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ESportDbContext>();
-builder.Services.AddControllersWithViews();
-
-builder.Services.AddApplicationServices(builder.Configuration);
-builder.Services.AddAutoMapper(typeof(MappingProfiler));
+builder.Services
+            .AddDatabase(builder.Configuration)
+            .AddDatabaseDeveloperPageExceptionFilter()
+            .AddIdentity()
+            .AddAutoMapper(typeof(MappingProfiler))
+            .AddApplicationServices(builder.Configuration)
+            .AddControllersWithViews();
 
 var app = builder.Build();
 
