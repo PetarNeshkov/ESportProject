@@ -1,0 +1,100 @@
+﻿@using E_SportManager.Data.enums
+@model EditPlayerFormModel
+
+@{
+    ViewData["Title"] = "Player Edit";
+}
+
+<link rel="stylesheet" href="/css/addPlayer.css">
+
+<h1 class="text-center mt-2">@ViewData["Title"]</h1>
+<div class="row mt-4 mb-4">
+    <div id="player" class="player col-6 col-lg-3 game-player h-100 m-auto">
+        <img id="player-image"
+             src=@Model.ImageUrl
+             class="player-img-top img-fluid player-image">
+        <div class="player-body">
+            <h5 id="player-name" class="player-title text-center mt-3" data-toggle="tooltip">
+                @Model.Name
+            </h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="items">
+                    <span id="player-role" class="role">@Model.Role</span>
+                    <span id="player-division" class="division d-flex">@Model.Division</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <form class="col-6 col-lg-9" method="post">
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" type="text" class="form-control" id="name-input">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="ImageUrl">Image URL</label>
+            <input asp-for="ImageUrl" type="text" class="form-control" id="image-input">
+            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        </div>
+            <div id="gap" class="form-group mt-3">
+                <div class="col-md-4">
+                    <label asp-for="Role">Role</label>
+                    <select asp-for="Role" id="role-input" placeholder="Select a role">
+                        @foreach(var role in Enum.GetValues(typeof(Role)))
+                        {
+                            <option value="@role">@role</option>
+                        }
+                    </select>
+                </div>
+            <div class="col-md-5">
+                <label asp-for="Division">Division</label>
+                <select asp-for="Division" id="division-input" placeholder="Select a division">
+                    @foreach(var division in Enum.GetValues(typeof(Division)))
+                    {
+                        <option>@division</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="YearsOfExperience">Years of experience</label>
+            <input asp-for="YearsOfExperience" type="number" class="form-control" id="role-input">
+            <span asp-validation-for="YearsOfExperience" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="Description">Description</label>
+            <textarea asp-for="Description" class="form-control" id="description-input"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="row mt-4">
+               <div class="col-auto ml-md-auto">
+                   <button type="submit" class="btn btn-primary">Edit Player</button>
+                   <a asp-controller="Players"
+                      asp-action="All"
+                      class="btn btn- btn-secondary">
+                       Cancel
+                   </a>
+               </div>
+            </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+    <script src="~/js/addForm.js"></script>
+    <@*script src="/js/selectize.js"></script>*@
+
+<script>
+   var $select = $('#role-input').selectize({
+    create: false,
+    sortField: 'text',
+    });
+
+    var $select = $('#division-input').selectize({
+    create: false,
+    sortField: false
+    });
+
+</script>
+}

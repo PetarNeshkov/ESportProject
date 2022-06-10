@@ -1,8 +1,7 @@
-﻿using E_SportManager.Data.enums;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-using static E_SportManager.Common.GlobalConstants.Player;
 using static E_SportManager.Common.ErrorMessages.Player;
+using static E_SportManager.Common.GlobalConstants.Player;
 
 namespace E_SportManager.Models.Players
 {
@@ -20,11 +19,9 @@ namespace E_SportManager.Models.Players
         public string ImageUrl { get; init; }
 
         [Required]
-        [EnumDataType(typeof(Role))]
         public string Role { get; init; }
 
         [Required]
-        [EnumDataType(typeof(Division))]
         public string Division { get; init; }
 
         [Range(0, 50)]

@@ -107,3 +107,8 @@
     display:flex;
     gap:55px;
 }
+
+#gap{
+    display:flex;
+    gap:240px;
+}

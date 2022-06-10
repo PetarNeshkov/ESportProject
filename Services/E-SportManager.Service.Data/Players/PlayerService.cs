@@ -31,8 +31,8 @@ namespace E_SportManager.Service.Data
                 Name = name,
                 ImageUrl = imageUrl,
                 YearsOfExperience = yearsOfExperience,
-                Role = Enum.Parse<Role>(role),
-                Division = Enum.Parse<Division>(division),
+                Role =role,
+                Division = division,
                 Description = description
             };
 

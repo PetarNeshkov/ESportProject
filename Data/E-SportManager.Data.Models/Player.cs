@@ -20,9 +20,11 @@ namespace E_SportManager.Data
         [Range(0,50)]
         public int YearsOfExperience { get; set; }
 
-        public Role Role { get; set; }
+        [Required]
+        public string Role { get; set; }
 
-        public Division Division { get; set; }
+        [Required]
+        public string Division { get; set; }
 
         [Required]
         [MaxLength(PlayerDescriptionMaxLength)]
