@@ -49,6 +49,9 @@ namespace E_SportManager.Controllers
                 input.Division,
                 input.Description);
 
+
+            TempData[GlobalMessageKey] = $"Player was successfully created!";
+
             return RedirectToAction(nameof(All));
         }
 
@@ -100,6 +103,8 @@ namespace E_SportManager.Controllers
                 input.Division,
                 input.Description);
 
+            TempData[GlobalMessageKey] = $"Player was successfully edited!";
+
             return RedirectToAction(nameof(All));
         }
 
@@ -119,6 +124,9 @@ namespace E_SportManager.Controllers
             //}
 
             await playerService.DeletePlayerAsync(id);
+
+            TempData[GlobalMessageKey] = $"Player was successfully deleted!";
+
 
             return RedirectToAction(nameof(All));
         }

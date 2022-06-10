@@ -2,6 +2,7 @@
 {
     public static class GlobalConstants
     {
+        public const string GlobalMessageKey = "GlobalMessage";
         public static class Player
         {
             public const int PlayerNameMinLength = 3;

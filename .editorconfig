@@ -20,6 +20,9 @@ csharp_space_around_binary_operators = before_and_after
 # CS8603: Possible null reference return.
 dotnet_diagnostic.CS8603.severity = silent
 
+# CS8766: Nullability of reference types in return type doesn't match implicitly implemented member (possibly because of nullability attributes).
+dotnet_diagnostic.CS8766.severity = silent
+
 [*.{cs,vb}]
 #### Naming styles ####
 
