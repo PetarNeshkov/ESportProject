@@ -1,9 +1,11 @@
 ﻿using E_SportManager.Data;
 using E_SportManager.Models.Players;
 using E_SportManager.Service.Data.Players;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using static E_SportManager.Common.ErrorMessages.Player;
+using static E_SportManager.Common.GlobalConstants;
 
 namespace E_SportManager.Controllers
 {
@@ -47,7 +49,7 @@ namespace E_SportManager.Controllers
                 input.Division,
                 input.Description);
 
-            return View(Create());
+            return RedirectToAction(nameof(All));
         }
 
         public async Task<IActionResult> All(AllPlayersQueryModel query)
@@ -57,6 +59,24 @@ namespace E_SportManager.Controllers
             query.Players = players;
 
             return View(query);
+        }
+
+        //[Authorize(Roles = Administrator.AdministratorRoleName)]
+        public async Task<IActionResult> Edit(string id)
+        {
+            var player= await playerService.GetByIdAsync<EditPlayerFormModel>(id);
+
+            if (player == null)
+            {
+                return NotFound();
+            }
+
+            //if (!User.IsAdministrator())
+            //{
+            //    return Unauthorized();
+            //}
+
+            return View(player);
         }
     }
 }

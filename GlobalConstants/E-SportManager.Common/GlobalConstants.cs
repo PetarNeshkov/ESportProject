@@ -17,5 +17,12 @@
             public const int UserPasswordMaxLength = 50;
             public const int UserPasswordMinLength = 6;
         }
+
+        public static class Administrator
+        {
+            public const string AdministratorRoleName = "Administrator";
+            public const string AdministratorUsername = "Admin";
+            
+        }
     }
 }

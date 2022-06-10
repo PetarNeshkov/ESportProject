@@ -48,6 +48,13 @@ namespace E_SportManager.Service.Data
                  .ProjectTo<TModel>(mapper.ConfigurationProvider)
                  .ToListAsync();
 
+        public async Task<TModel> GetByIdAsync<TModel>(string id)
+            => await data.Players
+                .AsNoTracking()
+                .Where(p=> p.Id == id && !p.IsDeleted)
+                .ProjectTo<TModel>(mapper.ConfigurationProvider)
+                .FirstOrDefaultAsync();
+
         public async Task<bool> IsExistingAsync(string name)
             => await data.Players.AnyAsync(p => p.Name == name && !p.IsDeleted);
     }

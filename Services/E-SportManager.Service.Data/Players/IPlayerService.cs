@@ -8,5 +8,7 @@
         Task<bool> IsExistingAsync(string name);
 
         Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>();
+
+        Task<TModel> GetByIdAsync<TModel>(string id);
     }
 }
