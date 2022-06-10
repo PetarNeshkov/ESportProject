@@ -7,6 +7,8 @@ namespace E_SportManager.Models.Players
 {
     public class EditPlayerFormModel
     {
+        public int Id { get; init; }
+
         [Required]
         [StringLength(
             PlayerNameMaxLength,
@@ -34,6 +36,6 @@ namespace E_SportManager.Models.Players
             MinimumLength = PlayerDescriptionMinLength)]
         public string Description { get; init; }
 
-        public string AuthorId { get; init; }
+       
     }
 }

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using E_SportManager.Data;
-using E_SportManager.Data.enums;
 using E_SportManager.Service.Data.Players;
 using Microsoft.EntityFrameworkCore;
 
@@ -40,6 +39,19 @@ namespace E_SportManager.Service.Data
             await data.SaveChangesAsync();
         }
 
+        public async Task EditPlayerAsync(int playerId, string name, string imageUrl, string role, string division, string description)
+        {
+            var player = await GetByIdAsync(playerId);
+
+            player.Name = name;
+            player.ImageUrl = imageUrl;
+            player.Role = role;
+            player.Division = division;
+            player.Description = description;
+
+            await data.SaveChangesAsync();
+        }
+
         public async Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>()
             =>await data.Players
                  .AsNoTracking()
@@ -48,7 +60,7 @@ namespace E_SportManager.Service.Data
                  .ProjectTo<TModel>(mapper.ConfigurationProvider)
                  .ToListAsync();
 
-        public async Task<TModel> GetByIdAsync<TModel>(string id)
+        public async Task<TModel> GetByIdAsync<TModel>(int id)
             => await data.Players
                 .AsNoTracking()
                 .Where(p=> p.Id == id && !p.IsDeleted)
@@ -57,5 +69,9 @@ namespace E_SportManager.Service.Data
 
         public async Task<bool> IsExistingAsync(string name)
             => await data.Players.AnyAsync(p => p.Name == name && !p.IsDeleted);
+
+        private async Task<Player> GetByIdAsync(int id)
+           => await data.Players.FirstOrDefaultAsync(p => p.Id == id);
+
     }
 }

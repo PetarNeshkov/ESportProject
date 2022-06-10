@@ -1,13 +1,16 @@
 ﻿using E_SportManager.Data.Common.Models;
-using E_SportManager.Data.enums;
 using System.ComponentModel.DataAnnotations;
 
 using static E_SportManager.Data.Common.DataValidation.Player;
 
 namespace E_SportManager.Data
 {
-    public class Player:BaseModel<string>
+    public class Player:BaseModel<int>
     {
+        public Player()
+        {
+            Teams= new HashSet<Team>();
+        }
 
         [Required]
         [MaxLength(PlayerNameMaxLength)]
@@ -30,7 +33,7 @@ namespace E_SportManager.Data
         [MaxLength(PlayerDescriptionMaxLength)]
         public string Description { get; set; }
 
-
+        public ICollection<Team> Teams { get; set; }
 
     }
 }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace E_SportManager.Data
 {
-    public class Team:BaseModel<string>
+    public class Team:BaseModel<int>
     {
         public Team()
         {

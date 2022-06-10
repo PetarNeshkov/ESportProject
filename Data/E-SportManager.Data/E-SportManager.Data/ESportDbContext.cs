@@ -14,6 +14,14 @@ namespace E_SportManager.Data
         public DbSet<Team> Teams { get; init; }
         public DbSet<Player> Players { get; init; }
 
+        public override int SaveChanges() => SaveChanges(true);
+
+        public override int SaveChanges(bool acceptAllChangesOnSuccess)
+        {
+            ApplyAuditforRules();
+            return base.SaveChanges(acceptAllChangesOnSuccess);
+        }
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
            => SaveChangesAsync(true, cancellationToken);
 

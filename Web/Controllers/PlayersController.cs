@@ -62,7 +62,7 @@ namespace E_SportManager.Controllers
         }
 
         //[Authorize(Roles = Administrator.AdministratorRoleName)]
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int id)
         {
             var player= await playerService.GetByIdAsync<EditPlayerFormModel>(id);
 
@@ -77,6 +77,30 @@ namespace E_SportManager.Controllers
             //}
 
             return View(player);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(EditPlayerFormModel input)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(input);
+            }
+
+            //if (!User.IsAdministrator())
+            //{
+            //    return Unauthorized();
+            //}
+
+            await playerService.EditPlayerAsync(
+                input.Id,
+                input.Name,
+                input.ImageUrl,
+                input.Role,
+                input.Division,
+                input.Description);
+
+            return RedirectToAction(nameof(All));
         }
     }
 }
