@@ -15,5 +15,7 @@ namespace E_SportManager.Service.Data.Players
 
         Task EditPlayerAsync(int playerId,string name,string imageUrl,string role,string division,
             string description);
+
+        Task DeletePlayerAsync(int id);
     }
 }

@@ -10,8 +10,8 @@ namespace E_SportManager
         public MappingProfiler()
         {
             CreateMap<Player, PlayerServiceModel>();
-            CreateMap<Player, EditPlayerFormModel>()
-              ;
+            CreateMap<Player, EditPlayerFormModel>();
+            CreateMap<Player,PlayerDeleteViewModel>();
         }
     }
 }

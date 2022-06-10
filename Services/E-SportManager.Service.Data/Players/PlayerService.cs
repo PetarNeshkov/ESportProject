@@ -39,6 +39,16 @@ namespace E_SportManager.Service.Data
             await data.SaveChangesAsync();
         }
 
+        public async Task DeletePlayerAsync(int id)
+        {
+            var player = await GetByIdAsync(id);
+
+            player.IsDeleted = true;
+            player.DeletedOn= DateTime.UtcNow.ToLocalTime().ToString("dd/MM/yyyy H:mm");
+
+            await data.SaveChangesAsync();
+        }
+
         public async Task EditPlayerAsync(int playerId, string name, string imageUrl, string role, string division, string description)
         {
             var player = await GetByIdAsync(playerId);

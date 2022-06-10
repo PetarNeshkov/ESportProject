@@ -102,5 +102,25 @@ namespace E_SportManager.Controllers
 
             return RedirectToAction(nameof(All));
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var player=await playerService.GetByIdAsync<PlayerDeleteViewModel>(id);
+
+            if (player==null)
+            {
+                return NotFound();
+            }
+
+            //if (!User.IsAdministrator())
+            //{
+            //    return Unauthorized();
+            //}
+
+            await playerService.DeletePlayerAsync(id);
+
+            return RedirectToAction(nameof(All));
+        }
     }
 }
