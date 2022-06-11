@@ -130,5 +130,17 @@ namespace E_SportManager.Controllers
 
             return RedirectToAction(nameof(All));
         }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var player = await playerService.GetByIdAsync<PlayerDetailsViewModel>(id);
+
+            if (player ==null)
+            {
+                return NotFound();
+            }
+
+            return View(player);
+        }
     }
 }
