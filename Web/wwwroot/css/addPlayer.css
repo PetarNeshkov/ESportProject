@@ -7,7 +7,7 @@
 .players{
     display:flex;
     flex-wrap:nowrap;
-    gap:50px;
+    gap:46px;
 }
 
 #description-input {

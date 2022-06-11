@@ -2,8 +2,13 @@
 using E_SportManager.Service.Data;
 using E_SportManager.Service.Data.Players;
 using E_SportManager.Service.Data.Users;
+
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -22,6 +27,20 @@ namespace Microsoft.Extensions.DependencyInjection
                  .SetIdentityOptions())
              .AddRoles<IdentityRole>()
              .AddEntityFrameworkStores<ESportDbContext>();
+
+            return services;
+        }
+
+          public static IServiceCollection AddAntiforgeryHeader(this IServiceCollection services)
+          => services
+              .AddAntiforgery(options => options
+                  .HeaderName = "X-CSRF-TOKEN");
+
+        public static IServiceCollection AddControllersWithAutoAntiforgeryTokenAttribute(this IServiceCollection services)
+        {    
+            services
+                    .AddControllersWithViews(options => options
+                    .Filters.Add<AutoValidateAntiforgeryTokenAttribute>());
 
             return services;
         }

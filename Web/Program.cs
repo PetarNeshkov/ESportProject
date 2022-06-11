@@ -1,16 +1,15 @@
 using E_SportManager;
-using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
 
 // Add services to the container.
 builder.Services
             .AddDatabase(builder.Configuration)
             .AddDatabaseDeveloperPageExceptionFilter()
             .AddIdentity()
+            .AddAntiforgeryHeader()
+            .AddControllersWithAutoAntiforgeryTokenAttribute()
             .AddAutoMapper(typeof(MappingProfiler))
             .AddApplicationServices(builder.Configuration)
             .AddControllersWithViews();
@@ -29,17 +28,15 @@ else
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages();
+app.UseHttpsRedirection()
+   .UseStaticFiles()
+   .UseRouting()
+   .UseAuthentication()
+   .UseAuthorization()
+   .UseEndpoints(endpoints =>
+    {
+        endpoints.MapDefaultControllerRoute();
+        endpoints.MapRazorPages();
+    });
 
 app.Run();

@@ -1,6 +1,7 @@
 ﻿using E_SportManager.Data;
 using E_SportManager.Models.Players;
 using E_SportManager.Service.Data.Players;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ using static E_SportManager.Common.GlobalConstants;
 
 namespace E_SportManager.Controllers
 {
+    [Authorize]
     public class PlayersController:Controller
     {
         private readonly ESportDbContext data;
@@ -20,11 +22,9 @@ namespace E_SportManager.Controllers
             this.playerService = playerService;
         }
 
-        //[Authorize]
         public IActionResult Create()=>View();
 
         [HttpPost]
-        //[Authorize]
         public async Task<IActionResult> Create(AddPlayerFormModel input)
         {
             var isExisting= await playerService.IsExistingAsync(input.Name);
@@ -55,6 +55,7 @@ namespace E_SportManager.Controllers
             return RedirectToAction(nameof(All));
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> All(AllPlayersQueryModel query)
         {
             var players =await playerService.GetAllPlayersAsync<PlayerServiceModel>();
@@ -131,6 +132,7 @@ namespace E_SportManager.Controllers
             return RedirectToAction(nameof(All));
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int id)
         {
             var player = await playerService.GetByIdAsync<PlayerDetailsViewModel>(id);
