@@ -1,4 +1,4 @@
-﻿using E_SportManager.Data;
+﻿using E_SportManager.Service.Data.Teams;
 using System.ComponentModel.DataAnnotations;
 
 using static E_SportManager.Common.ErrorMessages.Team;
@@ -8,35 +8,35 @@ namespace E_SportManager.Models.Teams
     public class AddTeamFormModel
     {
         [Required]
-        [StringLength(
-           TeamNameMaxLength,
-           ErrorMessage = NameLengthErrorMessage,
-           MinimumLength = TeamNameMinLength)]
-        public string Name { get; init; }
+        [StringLength(TeamNameMaxLength,MinimumLength =TeamNameMinLength,
+            ErrorMessage = NameLengthErrorMessage)]
+        public string Title { get; init; }
 
         [Required]
         [Url]
         public string ImageUrl { get; init; }
 
         [Required]
-        public string MidRole { get; init; }
+        public string MidLaner { get; init; }
 
         [Required]
-        public string TopRole { get; init; }
+        public string TopLaner { get; init; }
 
         [Required]
-        public string SupportRole { get; init; }
+        public string SupportLaner { get; init; }
 
         [Required]
-        public string JungleRole { get; init; }
+        public string JungleLaner { get; init; }
 
         [Required]
-        public string BottomRole { get; init; }
+        public string BottomLaner { get; init; }
 
-        public IEnumerable<Player> MidLaners { get; init; }
-        public IEnumerable<Player> TopLaners { get; init; }
-        public IEnumerable<Player> SupportLaners { get; init; }
-        public IEnumerable<Player> JungleLaners { get; init; }
-        public IEnumerable<Player> BottomLaners { get; init; }
+
+        public IEnumerable<PlayerListServiceModel> MidLaners { get; set; }
+        public IEnumerable<PlayerListServiceModel> TopLaners { get; set; }
+        public IEnumerable<PlayerListServiceModel> SupportLaners { get; set; }
+        public IEnumerable<PlayerListServiceModel> JungleLaners { get; set; }
+        public IEnumerable<PlayerListServiceModel> BottomLaners { get; set; }
+
     }
 }

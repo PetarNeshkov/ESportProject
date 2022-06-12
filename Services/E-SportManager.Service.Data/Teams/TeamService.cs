@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using E_SportManager.Data;
 using E_SportManager.Data.enums;
-using E_SportManager.Models.Teams;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace E_SportManager.Service.Data.Teams
@@ -23,7 +18,7 @@ namespace E_SportManager.Service.Data.Teams
             this.mapper = mapper;
         }
 
-        public async Task<IEnumerable<Player>> GetRoleAsync(Role role)
+        public async Task<IEnumerable<PlayerListServiceModel>> GetRoleAsync(Role role)
         {
             var queryablePlayers =  data.Players.AsNoTracking().Where(p=>!p.IsDeleted);
 
@@ -36,7 +31,9 @@ namespace E_SportManager.Service.Data.Teams
                 Role.Support or _ => queryablePlayers.Where(p => p.Role == role.ToString())
             };
 
-            return await queryablePlayers.ToListAsync();
+            return await queryablePlayers
+                    .ProjectTo<PlayerListServiceModel>(mapper.ConfigurationProvider)
+                    .ToListAsync();
         }
 
         public async Task<TeamImageServiceModel> GetImageAsync(string name)
@@ -52,5 +49,39 @@ namespace E_SportManager.Service.Data.Teams
             };
         }
 
+        public async Task CreateTeamAsync(
+            string title, 
+            string imageUrl, 
+            string midLaner,
+            string topLaner, 
+            string jungleLaner, 
+            string bottomLaner, 
+            string supportLaner, 
+            string authorId)
+        {
+            var team = new Team
+            {
+                Title=title,
+                ImageUrl=imageUrl,
+                MidLanerId= await GetPlayerIdAsync(midLaner),
+                TopLanerId= await GetPlayerIdAsync(topLaner),
+                BottomLanerId= await GetPlayerIdAsync(bottomLaner),
+                SupportLanerId= await GetPlayerIdAsync(supportLaner),
+                JungleLanerId= await GetPlayerIdAsync(jungleLaner),
+                AuthorId= authorId
+            };
+
+            await data.Teams.AddAsync(team);
+            await data.SaveChangesAsync();
+        }
+
+        private async Task<int> GetPlayerIdAsync(string name)
+            => await data.Players
+                .Where(p=>p.Name==name)
+                .Select(x=>x.Id)
+                .FirstAsync();
+
+        public async Task<bool> IsExistingAsync(string title)
+          => await data.Teams.AnyAsync(p => p.Title == title && !p.IsDeleted);
     }
 }

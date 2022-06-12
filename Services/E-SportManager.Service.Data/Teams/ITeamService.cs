@@ -1,15 +1,18 @@
-﻿using E_SportManager.Data;
-using E_SportManager.Data.enums;
-using E_SportManager.Models.Teams;
+﻿using E_SportManager.Data.enums;
+
 
 namespace E_SportManager.Service.Data.Teams
 {
     public interface ITeamService
     {
-        Task<IEnumerable<Player>> GetRoleAsync(Role role);
+        Task<IEnumerable<PlayerListServiceModel>> GetRoleAsync(Role role);
 
         Task<TeamImageServiceModel> GetImageAsync(string name);
 
-        //Task CreateTeamAsync(string name, string imageUrl, ,string authorId);
+        Task CreateTeamAsync(string title, string imageUrl,string midLaner,
+            string topLaner,string jungleLaner,string bottomLaner,
+            string supportLaner,string authorId);
+
+        Task<bool> IsExistingAsync(string title);
     }
 }

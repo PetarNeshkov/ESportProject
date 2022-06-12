@@ -43,6 +43,7 @@
                     <option>@role</option>
                 }
             </select>
+         <span asp-validation-for="Role" class="text-danger"></span>
         <div class="form-group mt-3">
             <label asp-for="Division">Division</label>
             <select asp-for="Division" id="division-input" placeholder="Select a division">
@@ -51,6 +52,7 @@
                     <option>@division</option>
                 }
             </select>
+          <span asp-validation-for="Division" class="text-danger"></span>
         </div>
         </div>
         <div class="form-group mt-3">

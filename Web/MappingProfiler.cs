@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using E_SportManager.Data;
 using E_SportManager.Models.Players;
+using E_SportManager.Service.Data.Teams;
 
 namespace E_SportManager
 {
@@ -12,6 +13,7 @@ namespace E_SportManager
             CreateMap<Player, EditPlayerFormModel>();
             CreateMap<Player,PlayerDeleteViewModel>();
             CreateMap<Player, PlayerDetailsViewModel>();
+            CreateMap<Player, PlayerListServiceModel>();
         }
     }
 }

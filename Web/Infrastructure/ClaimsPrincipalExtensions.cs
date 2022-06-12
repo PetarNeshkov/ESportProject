@@ -8,5 +8,8 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static bool IsAdministrator(this ClaimsPrincipal claimsPrincipal)
           => claimsPrincipal.IsInRole(AdministratorRoleName);
+
+        public static string Id(this ClaimsPrincipal user)
+           => user.FindFirst(ClaimTypes.NameIdentifier).Value;
     }
 }

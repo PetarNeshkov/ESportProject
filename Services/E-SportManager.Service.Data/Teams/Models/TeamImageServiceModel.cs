@@ -1,4 +1,4 @@
-﻿namespace E_SportManager.Models.Teams
+﻿namespace E_SportManager.Service.Data.Teams
 {
     public class TeamImageServiceModel
     {

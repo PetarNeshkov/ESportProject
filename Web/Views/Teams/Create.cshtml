@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Create a team";
+
 }
 
 <link rel="stylesheet" href="/css/addPlayer.css">
@@ -22,9 +23,9 @@
         <div id="sections">
             <form id="formH" method="post">
                 <div class="form-group">
-                    <label asp-for="Name">Name</label>
-                    <input asp-for="Name" type="text" class="form-control" id="name-input">
-                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <label asp-for="Title">Name</label>
+                    <input asp-for="Title" type="text" class="form-control" id="name-input">
+                    <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
                 <div class="form-group mt-3">
                     <label asp-for="ImageUrl">Image URL</label>
@@ -41,13 +42,14 @@
                                 Empty Mid Role
                             </h5>
                             <div style="text-align: center;">
-                                <p asp-for="MidRole">Mid Role</p>
-                                <select asp-for="MidRole" id="mid-input" placeholder="Select a mid laner">
-                                    @foreach (var midLaner in @Model.MidLaners)
+                                <label asp-for="MidLaner">Mid Role</label>
+                                <select asp-for="MidLaner" id="mid-input" placeholder="Select a mid laner">
+                                    @foreach (var midLaner in Model.MidLaners)
                                     {
                                         <option>@midLaner.Name</option>
                                     }
                                 </select>
+                                <span asp-validation-for="MidLaner" class="text-danger"></span>
                             </div>
                         </div>
                         <div id="player" class="player h-50">
@@ -58,13 +60,14 @@
                                 Empty Top Role
                             </h5>
                             <div style="text-align: center;">
-                                <p asp-for="TopRole">Top Role</p>
-                                <select asp-for="TopRole" id="top-input" placeholder="Select a top laner">
-                                    @foreach (var topLaner in @Model.TopLaners)
+                                 <label asp-for="TopLaner">Top Laner</label>
+                                <select asp-for="TopLaner" id="top-input" placeholder="Select a top laner">
+                                    @foreach (var topLaner in Model.TopLaners)
                                     {
                                         <option>@topLaner.Name</option>
                                     }
                                 </select>
+                                <span asp-validation-for="TopLaner" class="text-danger"></span>
                             </div>
                         </div>
                         <div id="player" class="player h-50">
@@ -75,13 +78,14 @@
                                 Empty Jungle Role
                             </h5>
                             <div style="text-align: center;">
-                                <p asp-for="JungleRole">Jungle Role</p>
-                                <select asp-for="JungleRole" id="jungle-input" placeholder="Select a jungle laner">
-                                    @foreach (var jungleLaner in @Model.JungleLaners)
+                                <label asp-for="JungleLaner">Jungle Role</label>
+                                <select asp-for="JungleLaner" id="jungle-input" placeholder="Select a jungle laner">
+                                    @foreach (var jungleLaner in Model.JungleLaners)
                                     {
                                         <option>@jungleLaner.Name</option>
                                     }
                                 </select>
+                                <span asp-validation-for="JungleLaner" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
@@ -94,13 +98,14 @@
                                 Empty Bottom Role
                             </h5>
                             <div style="text-align: center;">
-                                <p asp-for="BottomRole">Bottom Role</p>
-                                <select asp-for="BottomRole" id="bottom-input" placeholder="Select a bot laner">
-                                    @foreach (var bottomLaner in @Model.BottomLaners)
+                                <label asp-for="BottomLaner">Bottom Role</label>
+                                <select asp-for="BottomLaner" id="bottom-input" placeholder="Select a bot laner">
+                                    @foreach (var bottomLaner in Model.BottomLaners)
                                     {
                                         <option>@bottomLaner.Name</option>
                                     }
                                 </select>
+                                <span asp-validation-for="BottomLaner" class="text-danger"></span>
                             </div>
                         </div>
                         <div id="player" class="player h-50">
@@ -111,13 +116,14 @@
                                 Empty Support Role
                             </h5>
                             <div style="text-align: center;">
-                                <p asp-for="SupportRole">Support Role</p>
-                                <select asp-for="SupportRole" id="support-input" placeholder="Select a support laner">
-                                    @foreach (var supportLaner in @Model.SupportLaners)
+                                <label asp-for="SupportLaner">Support Role</label>
+                                <select asp-for="SupportLaner" id="support-input" placeholder="Select a support laner">
+                                    @foreach (var supportLaner in Model.SupportLaners)
                                     {
                                         <option>@supportLaner.Name</option>
                                     }
                                 </select>
+                               <span asp-validation-for="SupportLaner" class="text-danger"></span>
                             </div>
                         </div>
                     </div>

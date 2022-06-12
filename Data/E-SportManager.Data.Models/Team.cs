@@ -11,12 +11,17 @@ namespace E_SportManager.Data
         [MaxLength(TeamNameMaxLength)]
         public string Title { get; set; }
 
+        [Required]
+        [Url]
+        public string ImageUrl { get; set; }
+
         public int Rating { get; set; }
 
         public string AuthorId { get; set; }
 
         public User Author { get; set; }
 
+        [Required]
         public int MidLanerId { get; set; }
 
         public Player MidLaner { get; set; }
