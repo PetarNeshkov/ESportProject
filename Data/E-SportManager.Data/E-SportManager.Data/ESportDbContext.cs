@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using YourMoviesForum.Data.Common.Models;
 
 namespace E_SportManager.Data
 {
-    public class ESportDbContext : IdentityDbContext
+    public class ESportDbContext : IdentityDbContext<User>
     {
         public ESportDbContext(DbContextOptions<ESportDbContext> options)
             : base(options)
@@ -29,6 +30,8 @@ namespace E_SportManager.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
 
             var entityTypes = builder.Model.GetEntityTypes().ToList();
 

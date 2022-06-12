@@ -10,10 +10,10 @@ namespace E_SportManager.Data
             Teams=new HashSet<Team>();
         }
 
-        public string CreatedOn { get; set; }
-        public string ModifiedOn { get; set; }
+        public string? CreatedOn { get; set; }
+        public string? ModifiedOn { get; set; }
         public bool IsDeleted { get; set; }
-        public string DeletedOn { get; set; }
+        public string? DeletedOn { get; set; }
 
         public ICollection<Team> Teams { get; init; }
     }

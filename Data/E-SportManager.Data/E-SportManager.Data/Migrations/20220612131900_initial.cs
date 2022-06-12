@@ -28,6 +28,10 @@ namespace E_SportManager.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CreatedOn = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ModifiedOn = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    DeletedOn = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -68,24 +72,6 @@ namespace E_SportManager.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Players", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Teams",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Rating = table.Column<int>(type: "int", nullable: false),
-                    CreatedOn = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ModifiedOn = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    DeletedOn = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Teams", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -195,25 +181,61 @@ namespace E_SportManager.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PlayerTeam",
+                name: "Teams",
                 columns: table => new
                 {
-                    PlayersId = table.Column<int>(type: "int", nullable: false),
-                    TeamsId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Rating = table.Column<int>(type: "int", nullable: false),
+                    AuthorId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    MidLanerId = table.Column<int>(type: "int", nullable: false),
+                    TopLanerId = table.Column<int>(type: "int", nullable: false),
+                    BottomLanerId = table.Column<int>(type: "int", nullable: false),
+                    SupportLanerId = table.Column<int>(type: "int", nullable: false),
+                    JungleLanerId = table.Column<int>(type: "int", nullable: false),
+                    CreatedOn = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ModifiedOn = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    DeletedOn = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PlayerTeam", x => new { x.PlayersId, x.TeamsId });
+                    table.PrimaryKey("PK_Teams", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PlayerTeam_Players_PlayersId",
-                        column: x => x.PlayersId,
+                        name: "FK_Teams_AspNetUsers_AuthorId",
+                        column: x => x.AuthorId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Teams_Players_BottomLanerId",
+                        column: x => x.BottomLanerId,
                         principalTable: "Players",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PlayerTeam_Teams_TeamsId",
-                        column: x => x.TeamsId,
-                        principalTable: "Teams",
+                        name: "FK_Teams_Players_JungleLanerId",
+                        column: x => x.JungleLanerId,
+                        principalTable: "Players",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Teams_Players_MidLanerId",
+                        column: x => x.MidLanerId,
+                        principalTable: "Players",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Teams_Players_SupportLanerId",
+                        column: x => x.SupportLanerId,
+                        principalTable: "Players",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Teams_Players_TopLanerId",
+                        column: x => x.TopLanerId,
+                        principalTable: "Players",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -258,9 +280,34 @@ namespace E_SportManager.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PlayerTeam_TeamsId",
-                table: "PlayerTeam",
-                column: "TeamsId");
+                name: "IX_Teams_AuthorId",
+                table: "Teams",
+                column: "AuthorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teams_BottomLanerId",
+                table: "Teams",
+                column: "BottomLanerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teams_JungleLanerId",
+                table: "Teams",
+                column: "JungleLanerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teams_MidLanerId",
+                table: "Teams",
+                column: "MidLanerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teams_SupportLanerId",
+                table: "Teams",
+                column: "SupportLanerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teams_TopLanerId",
+                table: "Teams",
+                column: "TopLanerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -281,7 +328,7 @@ namespace E_SportManager.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "PlayerTeam");
+                name: "Teams");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -291,9 +338,6 @@ namespace E_SportManager.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Players");
-
-            migrationBuilder.DropTable(
-                name: "Teams");
         }
     }
 }

@@ -9,7 +9,11 @@ namespace E_SportManager.Data
     {
         public Player()
         {
-            Teams= new HashSet<Team>();
+            MidLaners= new HashSet<Team>();
+            TopLaners= new HashSet<Team>();
+            JungleLaners= new HashSet<Team>();
+            BottomLaners= new HashSet<Team>();
+            SupportLaners= new HashSet<Team>();
         }
 
         [Required]
@@ -33,7 +37,11 @@ namespace E_SportManager.Data
         [MaxLength(PlayerDescriptionMaxLength)]
         public string Description { get; set; }
 
-        public ICollection<Team> Teams { get; set; }
+        public ICollection<Team> MidLaners { get; init; }
+        public ICollection<Team> TopLaners { get; init; }
+        public ICollection<Team> JungleLaners { get; init; }
+        public ICollection<Team> BottomLaners { get; init; }
+        public ICollection<Team> SupportLaners { get; init; }
 
     }
 }
