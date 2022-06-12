@@ -2,6 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
+using E_SportManager.Data;
 using E_SportManager.Service.Data.Users;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -20,15 +21,15 @@ namespace E_SportManager.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> signInManager;
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly SignInManager<User> signInManager;
+        private readonly UserManager<User> userManager;
         private readonly IEmailSender emailSender;
         private readonly IUserService userService;
 
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<User> userManager,
+            SignInManager<User> signInManager,
             IUserService userService,
             IEmailSender emailSender)
         {
@@ -98,7 +99,7 @@ namespace E_SportManager.Areas.Identity.Pages.Account
                     return this.Page();
                 }
 
-                var user = new IdentityUser
+                var user = new User
                 {
                     UserName = Input.Username,
                     Email = Input.Email

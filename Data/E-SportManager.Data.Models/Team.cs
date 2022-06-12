@@ -16,6 +16,10 @@ namespace E_SportManager.Data
 
         public int Rating { get; set; }
 
+        public string AuthorId { get; set; }
+
+        public User Author { get; set; }
+
         public ICollection<Player> Players { get; set; }
     }
 }

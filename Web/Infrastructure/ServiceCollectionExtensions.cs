@@ -24,7 +24,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
         public static IServiceCollection AddIdentity(this IServiceCollection services)
         {
-            services.AddDefaultIdentity<IdentityUser>(options=>options
+            services.AddDefaultIdentity<User>(options=>options
                  .SetIdentityOptions())
              .AddRoles<IdentityRole>()
              .AddEntityFrameworkStores<ESportDbContext>();

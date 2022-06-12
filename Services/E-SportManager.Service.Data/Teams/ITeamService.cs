@@ -9,5 +9,7 @@ namespace E_SportManager.Service.Data.Teams
         Task<IEnumerable<Player>> GetRoleAsync(Role role);
 
         Task<TeamImageServiceModel> GetImageAsync(string name);
+
+        //Task CreateTeamAsync(string name, string imageUrl, ,string authorId);
     }
 }
