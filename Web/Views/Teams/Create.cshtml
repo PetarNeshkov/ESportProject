@@ -1,0 +1,197 @@
+﻿@model AddTeamFormModel
+
+@{
+    ViewData["Title"] = "Create a team";
+}
+
+<link rel="stylesheet" href="/css/addPlayer.css">
+
+<body>
+    <main>
+        <div id="container">
+            <h1 class="text-center">@ViewData["Title"]</h1>
+            <div id="player" class="player col-6 col-lg-3 game-player h-100 m-auto">
+                <img id="player-image"
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                class="player-img-top img-fluid player-image">
+                <h5 id="player-name" class="player-title text-center mt-1 pb-2" data-toggle="tooltip">
+                    Empty Team Name
+                </h5>
+            </div>
+        </div>
+        <div id="sections">
+            <form id="formH" method="post">
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" type="text" class="form-control" id="name-input">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <label asp-for="ImageUrl">Image URL</label>
+                    <input asp-for="ImageUrl" type="text" class="form-control" id="image-input">
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
+                <div class="player_section mt-3">
+                    <div class="d-flex" style="justify-content: center; gap: 25px;">
+                        <div id="player" class="player h-50">
+                            <img id="player-mid-image"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                            class="player-img-top img-fluid player-image">
+                            <h5 id="player-role-mid" class="player-title text-center mt-3" data-toggle="tooltip">
+                                Empty Mid Role
+                            </h5>
+                            <div style="text-align: center;">
+                                <p asp-for="MidRole">Mid Role</p>
+                                <select asp-for="MidRole" id="mid-input" placeholder="Select a mid laner">
+                                    @foreach (var midLaner in @Model.MidLaners)
+                                    {
+                                        <option>@midLaner.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div id="player" class="player h-50">
+                            <img id="player-top-image"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                            class="player-img-top img-fluid player-image">
+                            <h5 id="player-role-top" class="player-title text-center mt-3" data-toggle="tooltip">
+                                Empty Top Role
+                            </h5>
+                            <div style="text-align: center;">
+                                <p asp-for="TopRole">Top Role</p>
+                                <select asp-for="TopRole" id="top-input" placeholder="Select a top laner">
+                                    @foreach (var topLaner in @Model.TopLaners)
+                                    {
+                                        <option>@topLaner.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div id="player" class="player h-50">
+                            <img id="player-jungle-image"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                            class="player-img-top img-fluid player-image">
+                            <h5 id="player-role-jungle" class="player-title text-center mt-3" data-toggle="tooltip">
+                                Empty Jungle Role
+                            </h5>
+                            <div style="text-align: center;">
+                                <p asp-for="JungleRole">Jungle Role</p>
+                                <select asp-for="JungleRole" id="jungle-input" placeholder="Select a jungle laner">
+                                    @foreach (var jungleLaner in @Model.JungleLaners)
+                                    {
+                                        <option>@jungleLaner.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-5" style="justify-content: center; gap: 25px;">
+                        <div id="player" class="player h-50">
+                            <img id="player-bottom-image"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                            class="player-img-top img-fluid player-image">
+                            <h5 id="player-role-bottom" class="player-title text-center mt-3" data-toggle="tooltip">
+                                Empty Bottom Role
+                            </h5>
+                            <div style="text-align: center;">
+                                <p asp-for="BottomRole">Bottom Role</p>
+                                <select asp-for="BottomRole" id="bottom-input" placeholder="Select a bot laner">
+                                    @foreach (var bottomLaner in @Model.BottomLaners)
+                                    {
+                                        <option>@bottomLaner.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div id="player" class="player h-50">
+                            <img id="player-support-image"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                            class="player-img-top img-fluid player-image">
+                            <h5 id="player-role-support" class="player-title text-center mt-3" data-toggle="tooltip">
+                                Empty Support Role
+                            </h5>
+                            <div style="text-align: center;">
+                                <p asp-for="SupportRole">Support Role</p>
+                                <select asp-for="SupportRole" id="support-input" placeholder="Select a support laner">
+                                    @foreach (var supportLaner in @Model.SupportLaners)
+                                    {
+                                        <option>@supportLaner.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary mt-3 w-100">Create Team</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+
+@section Scripts{
+<partial name="_ValidationScriptsPartial" />
+
+<script src="~/js/addForm.js"></script>
+<script src="~/js/selectize.js"></script>
+
+
+
+<script>
+    $('#mid-input').change(function(){
+          $.ajax({
+              type: "GET",
+              url: "/api/images",
+              data:{"title":$("#mid-input").val()},
+              success: function (html) {
+                 $('#player-mid-image').attr('src', html.imageUrl);
+              }
+          });
+       });
+
+    $('#bottom-input').change(function(){
+          $.ajax({
+              type: "GET",
+              url: "/api/images",
+              data:{"title":$("#bottom-input").val()},
+              success: function (html) {
+                 $('#player-bottom-image').attr('src', html.imageUrl);
+              }
+          });
+       });
+
+        $('#top-input').change(function(){
+          $.ajax({
+              type: "GET",
+              url: "/api/images",
+              data:{"title":$("#top-input").val()},
+              success: function (html) {
+                 $('#player-top-image').attr('src', html.imageUrl);
+              }
+          });
+       });
+
+        $('#jungle-input').change(function(){
+          $.ajax({
+              type: "GET",
+              url: "/api/images",
+              data:{"title":$("#jungle-input").val()},
+              success: function (html) {
+                 $('#player-jungle-image').attr('src', html.imageUrl);
+              }
+          });
+       });
+
+        $('#support-input').change(function(){
+          $.ajax({
+              type: "GET",
+              url: "/api/images",
+              data:{"title":$("#support-input").val()},
+              success: function (html) {
+                 $('#player-support-image').attr('src', html.imageUrl);
+              }
+          });
+       });
+
+</script>
+}

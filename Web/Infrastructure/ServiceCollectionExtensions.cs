@@ -1,6 +1,7 @@
 ﻿using E_SportManager.Data;
 using E_SportManager.Service.Data;
 using E_SportManager.Service.Data.Players;
+using E_SportManager.Service.Data.Teams;
 using E_SportManager.Service.Data.Users;
 
 using Microsoft.AspNetCore.Builder;
@@ -51,7 +52,8 @@ namespace Microsoft.Extensions.DependencyInjection
             services
                 .AddSingleton(configuration)
                 .AddScoped<IPlayerService, PlayerService>()
-                .AddScoped<IUserService,UserService>();
+                .AddScoped<IUserService,UserService>()
+                .AddScoped<ITeamService,TeamService>();
 
             return services;
         }

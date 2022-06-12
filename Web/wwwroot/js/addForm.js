@@ -27,3 +27,24 @@ $("#role-input").change(function () {
 $("#division-input").change(function () {
     $('#player-division').text($("#division-input").val());
 })
+
+
+$("#mid-input").change(function () {
+    $('#player-role-mid').text($("#mid-input").val());
+})
+
+$("#top-input").change(function () {
+    $('#player-role-top').text($("#top-input").val());
+})
+
+$("#jungle-input").change(function () {
+    $('#player-role-jungle').text($("#jungle-input").val());
+})
+
+$("#support-input").change(function () {
+    $('#player-role-support').text($("#support-input").val());
+})
+
+$("#bottom-input").change(function () {
+    $('#player-role-bottom').text($("#bottom-input").val());
+})

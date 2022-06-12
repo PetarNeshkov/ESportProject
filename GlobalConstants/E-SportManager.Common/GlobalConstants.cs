@@ -11,6 +11,12 @@
             public const int PlayerDescriptionMaxLength = 1500;
         }
 
+        public static class Team
+        {
+            public const int TeamNameMinLength = 3;
+            public const int TeamNameMaxLength = 30;
+        }
+
         public static class User
         {
             public const int UserUsernameMaxLength = 30;

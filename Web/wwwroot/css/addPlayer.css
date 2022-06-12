@@ -141,3 +141,16 @@ main {
     background-color: white;
     padding: 5px 40px 40px 60px;
 }
+
+#right{
+    float:right;
+}
+
+#left{
+    float:left;
+}
+
+#sections {
+    margin-top: 30px;
+    gap: 80px
+}

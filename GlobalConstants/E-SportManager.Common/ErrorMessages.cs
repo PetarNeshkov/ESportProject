@@ -7,7 +7,13 @@ namespace E_SportManager.Common
         {
             public const string NameLengthErrorMessage= "The {0} must be at least {2} and at max {1} characters long.";
             public const string DescriptionLengthErrorMessage= "The {0} must be at least {2} and at max {1} characters long.";
-            public const string PlayerExistingErrorMessage = "There is already player with this name";
+            public const string PlayerExistingErrorMessage = "There is already player with this name.";
+        }
+
+        public static class Team
+        {
+           public const string NameLengthErrorMessage = "The {0} must be at least {2} and at max {1} characters long.";
+           public const string TeamExistingErrorMessage = "There is already team with this name.";
         }
 
         public static class User
