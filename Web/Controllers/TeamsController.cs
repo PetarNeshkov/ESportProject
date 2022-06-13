@@ -37,12 +37,6 @@ namespace E_SportManager.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(AddTeamFormModel input)
         {
-
-            ModelState.Remove("MidLaners");
-            ModelState.Remove("TopLaners");
-            ModelState.Remove("BottomLaners");
-            ModelState.Remove("SupportLaners");
-            ModelState.Remove("JungleLaners");
             if (!ModelState.IsValid)
             {
                 input.MidLaners = await teamService.GetRoleAsync(Role.Mid);
@@ -120,6 +114,31 @@ namespace E_SportManager.Controllers
 
             return RedirectToAction(nameof(All));
         }
+
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var team = await teamService.GetByIdAsync<EditTeamFormModel>(id);
+
+            team.MidLaners = await teamService.GetRoleAsync(Role.Mid);
+            team.BottomLaners = await teamService.GetRoleAsync(Role.Bottom);
+            team.SupportLaners = await teamService.GetRoleAsync(Role.Support);
+            team.JungleLaners = await teamService.GetRoleAsync(Role.Jungle);
+            team.TopLaners = await teamService.GetRoleAsync(Role.Top);
+
+            if (team==null)
+            {
+                return NotFound();
+            }
+
+            //if (!User.IsAdministrator())
+            //{
+            //    return Unauthorized();
+            //}
+
+            return View(team);
+        }
+
 
     }
 }
