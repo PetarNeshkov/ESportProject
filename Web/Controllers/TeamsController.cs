@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using static E_SportManager.Common.GlobalConstants;
+using static E_SportManager.Common.GlobalConstants.Team;
 using static E_SportManager.Common.ErrorMessages.Team;
+using E_SportManager.Service.Providers.Pagination;
 
 namespace E_SportManager.Controllers
 {
@@ -83,11 +85,15 @@ namespace E_SportManager.Controllers
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> All(AllTeamsQueryModel query)
+        public async Task<IActionResult> All(AllTeamsQueryModel query,int page=1)
         {
-            var teams = await teamService.GetAllTeamsAsync<TeamServiceModel>();
+            var count= await teamService.GetTotalTeamsCountAsync();
+            var skip=(page-1) * TeamsPerPage;
+
+            var teams = await teamService.GetAllTeamsAsync<TeamServiceModel>(skip);
 
             query.Teams = teams;
+            query.Pagination = PaginationProvider.PaginationHelper(page, count, TeamsPerPage);
 
             return View(query);
         }
