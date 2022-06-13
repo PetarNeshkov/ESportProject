@@ -33,6 +33,9 @@
                            <a class="nav-link text-dark" asp-controller="Teams" asp-action="Create">Create Team</a>
                         </li>
                         <li class="nav-item">
+                           <a class="nav-link text-dark" asp-controller="Teams" asp-action="All">Teams</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
@@ -46,9 +49,7 @@
         {
             <div class="alert alert-success text-center" role="alert">
                 @TempData[GlobalConstants.GlobalMessageKey]
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                
             </div>
         }
         <main role="main" class="pb-3">
