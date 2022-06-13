@@ -139,6 +139,55 @@ namespace E_SportManager.Controllers
             return View(team);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Edit(EditTeamFormModel input)
+        {
+            if (!ModelState.IsValid)
+            {
+                input.MidLaners = await teamService.GetRoleAsync(Role.Mid);
+                input.BottomLaners = await teamService.GetRoleAsync(Role.Bottom);
+                input.SupportLaners = await teamService.GetRoleAsync(Role.Support);
+                input.JungleLaners = await teamService.GetRoleAsync(Role.Jungle);
+                input.TopLaners = await teamService.GetRoleAsync(Role.Top);
 
+                return View(input);
+            }
+
+            var isExisting = await teamService.IsExistingAsync(input.Title);
+
+            if (isExisting)
+            {
+                ModelState.AddModelError(input.Title, TeamExistingErrorMessage);
+
+                input.MidLaners = await teamService.GetRoleAsync(Role.Mid);
+                input.BottomLaners = await teamService.GetRoleAsync(Role.Bottom);
+                input.SupportLaners = await teamService.GetRoleAsync(Role.Support);
+                input.JungleLaners = await teamService.GetRoleAsync(Role.Jungle);
+                input.TopLaners = await teamService.GetRoleAsync(Role.Top);
+
+                return View(input);
+            }
+
+            var teamAuthorId = await teamService.GetTeamAuthorIdAsync(input.Id);
+
+            if (teamAuthorId != User.Id() && !User.IsAdministrator())
+            {
+                return Unauthorized();
+            }
+
+            await teamService.EditTeamAsync(
+                input.Id,
+                input.Title,
+                input.ImageUrl,
+                input.MidLaner,
+                input.TopLaner,
+                input.JungleLaner,
+                input.BottomLaner,
+                input.SupportLaner);
+
+            TempData[GlobalMessageKey] = "Player was edited successfully!";
+
+            return RedirectToAction(nameof(All));
+        }
     }
 }

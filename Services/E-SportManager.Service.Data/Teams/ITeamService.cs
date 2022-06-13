@@ -25,5 +25,11 @@ namespace E_SportManager.Service.Data.Teams
         Task<Team> GetByIdAsync(int id);
 
         Task DeleteTeamAsync(int id);
+
+        Task<string> GetTeamAuthorIdAsync(int id);
+
+        Task EditTeamAsync(int id, string title, string imageUrl, string midLaner,
+             string topLaner, string jungleLaner, string bottomLaner,
+             string supportLaner);
     }
 }

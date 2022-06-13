@@ -7,6 +7,8 @@ namespace E_SportManager.Models.Teams
 {
     public class EditTeamFormModel:EditTeamImageUrlFormModel
     {
+        public int Id { get; init; }
+
         [Required]
         [StringLength(TeamNameMaxLength, MinimumLength = TeamNameMinLength,
           ErrorMessage = NameLengthErrorMessage)]

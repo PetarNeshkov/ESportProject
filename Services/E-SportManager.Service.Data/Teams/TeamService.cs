@@ -115,5 +115,27 @@ namespace E_SportManager.Service.Data.Teams
         public async Task<Team> GetByIdAsync(int id)
             => await data.Teams
                  .FirstOrDefaultAsync(t => t.Id == id && !t.IsDeleted);
+
+        public async Task<string> GetTeamAuthorIdAsync(int id)
+            => await data.Teams
+                 .AsNoTracking()
+                 .Where(t => t.Id == id && !t.IsDeleted)
+                 .Select(t => t.AuthorId)
+                 .FirstOrDefaultAsync();
+
+        public async Task EditTeamAsync(int id, string title, string imageUrl, string midLaner, string topLaner, string jungleLaner, string bottomLaner, string supportLaner)
+        {
+            var team= await GetByIdAsync(id);
+            
+            team.Title = title;
+            team.ImageUrl = imageUrl;
+            team.MidLanerId = await GetPlayerIdAsync(midLaner);
+            team.TopLanerId = await GetPlayerIdAsync(topLaner);
+            team.JungleLanerId = await GetPlayerIdAsync(jungleLaner);
+            team.BottomLanerId = await GetPlayerIdAsync(bottomLaner);
+            team.SupportLanerId = await GetPlayerIdAsync(supportLaner);
+
+            await data.SaveChangesAsync();
+        }
     }
 }
