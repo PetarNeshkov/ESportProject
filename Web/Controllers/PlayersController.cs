@@ -127,7 +127,7 @@ namespace E_SportManager.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            var player=await playerService.GetByIdAsync<PlayerDeleteViewModel>(id);
+            var player=await playerService.GetByIdAsync(id);
 
             if (player==null)
             {

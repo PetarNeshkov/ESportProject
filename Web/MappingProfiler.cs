@@ -12,10 +12,8 @@ namespace E_SportManager
         {
             CreateMap<Player, PlayerServiceModel>();
             CreateMap<Player, EditPlayerFormModel>();
-            CreateMap<Player,PlayerDeleteViewModel>();
             CreateMap<Player, PlayerDetailsViewModel>();
             CreateMap<Player, PlayerListServiceModel>();
-
 
             CreateMap<Team, TeamServiceModel>();
         }

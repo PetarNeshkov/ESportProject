@@ -81,7 +81,7 @@ namespace E_SportManager.Controllers
 
             TempData[GlobalMessageKey] = $"Team was successfully created!";
 
-            return View(input);
+            return RedirectToAction(nameof(All));
         }
 
         [AllowAnonymous]
@@ -97,5 +97,29 @@ namespace E_SportManager.Controllers
 
             return View(query);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var team= await teamService.GetByIdAsync(id);
+
+            if (team == null)
+            {
+                return NotFound();
+            }
+
+            //if (!User.IsAdministrator())
+            //{
+            //    return Unauthorized();
+            //}
+
+
+            await teamService.DeleteTeamAsync(id);
+
+            TempData[GlobalMessageKey] = $"Team was successfully deleted!";
+
+            return RedirectToAction(nameof(All));
+        }
+
     }
 }

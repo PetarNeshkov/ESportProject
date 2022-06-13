@@ -94,5 +94,26 @@ namespace E_SportManager.Service.Data.Teams
 
         public async Task<int> GetTotalTeamsCountAsync()
           => await data.Teams.Where(t => !t.IsDeleted).CountAsync();
+
+        public async Task DeleteTeamAsync(int id)
+        {
+            var team= await GetByIdAsync(id);
+
+            team.IsDeleted = true;
+            team.DeletedOn = DateTime.UtcNow.ToLocalTime().ToString("dd/MM/yyyy H:mm");
+
+            await data.SaveChangesAsync();
+        }
+
+        public async Task<TModel> GetByIdAsync<TModel>(int id)
+          => await data.Teams
+              .AsNoTracking()
+              .Where(p => p.Id == id && !p.IsDeleted)
+              .ProjectTo<TModel>(mapper.ConfigurationProvider)
+              .FirstOrDefaultAsync();
+
+        public async Task<Team> GetByIdAsync(int id)
+            => await data.Teams
+                 .FirstOrDefaultAsync(t => t.Id == id && !t.IsDeleted);
     }
 }

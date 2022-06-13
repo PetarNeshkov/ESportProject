@@ -1,4 +1,5 @@
-﻿using E_SportManager.Data.enums;
+﻿using E_SportManager.Data;
+using E_SportManager.Data.enums;
 
 
 namespace E_SportManager.Service.Data.Teams
@@ -18,5 +19,11 @@ namespace E_SportManager.Service.Data.Teams
         Task<IEnumerable<TModel>> GetAllTeamsAsync<TModel>(int skip=0);
 
         Task<int> GetTotalTeamsCountAsync();
+
+        Task<TModel> GetByIdAsync<TModel>(int id);
+
+        Task<Team> GetByIdAsync(int id);
+
+        Task DeleteTeamAsync(int id);
     }
 }

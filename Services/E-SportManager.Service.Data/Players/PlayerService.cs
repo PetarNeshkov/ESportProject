@@ -87,8 +87,8 @@ namespace E_SportManager.Service.Data
         public async Task<bool> IsExistingAsync(string name)
             => await data.Players.AnyAsync(p => p.Name == name && !p.IsDeleted);
 
-        private async Task<Player> GetByIdAsync(int id)
-           => await data.Players.FirstOrDefaultAsync(p => p.Id == id);
+        public async Task<Player> GetByIdAsync(int id)
+           => await data.Players.FirstOrDefaultAsync(p => p.Id == id && !p.IsDeleted);
 
     }
 }
