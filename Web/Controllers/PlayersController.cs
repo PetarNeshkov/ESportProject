@@ -1,12 +1,13 @@
 ﻿using E_SportManager.Data;
 using E_SportManager.Models.Players;
 using E_SportManager.Service.Data.Players;
-
+using E_SportManager.Service.Providers.Pagination;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using static E_SportManager.Common.ErrorMessages.Player;
 using static E_SportManager.Common.GlobalConstants;
+using static E_SportManager.Common.GlobalConstants.Player;
 
 namespace E_SportManager.Controllers
 {
@@ -56,11 +57,15 @@ namespace E_SportManager.Controllers
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> All(AllPlayersQueryModel query)
+        public async Task<IActionResult> All(AllPlayersQueryModel query, int page=1)
         {
-            var players =await playerService.GetAllPlayersAsync<PlayerServiceModel>();
+            var count = await playerService.GetTotalPlayersCountAsync();
+            var skip=(page - 1) * PlayersPerPage;
+
+            var players =await playerService.GetAllPlayersAsync<PlayerServiceModel>(skip);
 
             query.Players = players;
+            query.Pagination=PaginationProvider.PaginationHelper(page,count,PlayersPerPage);
 
             return View(query);
         }

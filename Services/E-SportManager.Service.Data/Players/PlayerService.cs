@@ -4,6 +4,8 @@ using E_SportManager.Data;
 using E_SportManager.Service.Data.Players;
 using Microsoft.EntityFrameworkCore;
 
+using static E_SportManager.Common.GlobalConstants.Player;
+
 namespace E_SportManager.Service.Data
 {
     public class PlayerService : IPlayerService
@@ -63,11 +65,12 @@ namespace E_SportManager.Service.Data
             await data.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>()
+        public async Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>(int skip=0)
             =>await data.Players
                  .AsNoTracking()
                  .OrderByDescending(p=>p.CreatedOn)
                  .Where(p=>!p.IsDeleted)
+                 .Skip(skip).Take(PlayersPerPage)
                  .ProjectTo<TModel>(mapper.ConfigurationProvider)
                  .ToListAsync();
 
@@ -77,6 +80,9 @@ namespace E_SportManager.Service.Data
                 .Where(p=> p.Id == id && !p.IsDeleted)
                 .ProjectTo<TModel>(mapper.ConfigurationProvider)
                 .FirstOrDefaultAsync();
+
+        public async Task<int> GetTotalPlayersCountAsync()
+            =>await data.Players.Where(p => !p.IsDeleted).CountAsync();
 
         public async Task<bool> IsExistingAsync(string name)
             => await data.Players.AnyAsync(p => p.Name == name && !p.IsDeleted);

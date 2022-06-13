@@ -6,7 +6,7 @@
 <div class="players">
     @foreach (var player in Model.Players)
     {
-        <div class="player col-6 col-lg-3">
+        <div class="player">
             <img src="@player.ImageUrl"
              class="player-img-top img-fluid player-image">
             <div class="player-body">
@@ -31,5 +31,6 @@
         </div>
     }
 </div>
+<partial name="_PaginationPartial" model="@Model.Pagination" />
 
 <script src="~/js/addForm.js"></script>

@@ -9,12 +9,14 @@
             public const int PlayerNameMaxLength = 30;
             public const int PlayerDescriptionMinLength = 10;
             public const int PlayerDescriptionMaxLength = 1500;
+            public const int PlayersPerPage = 4;
         }
 
         public static class Team
         {
             public const int TeamNameMinLength = 3;
             public const int TeamNameMaxLength = 30;
+            public const int TeamsPerPage = 4;
         }
 
         public static class User
