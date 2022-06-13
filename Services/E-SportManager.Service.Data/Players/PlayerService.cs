@@ -49,13 +49,14 @@ namespace E_SportManager.Service.Data
             await data.SaveChangesAsync();
         }
 
-        public async Task EditPlayerAsync(int playerId, string name, string imageUrl, string role, string division, string description)
+        public async Task EditPlayerAsync(int playerId, string name, string imageUrl, int yearsOfExperience,string role, string division, string description)
         {
             var player = await GetByIdAsync(playerId);
 
             player.Name = name;
             player.ImageUrl = imageUrl;
             player.Role = role;
+            player.YearsOfExperience= yearsOfExperience;
             player.Division = division;
             player.Description = description;
 

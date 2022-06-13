@@ -14,5 +14,7 @@ namespace E_SportManager.Service.Data.Teams
             string supportLaner,string authorId);
 
         Task<bool> IsExistingAsync(string title);
+
+        Task<IEnumerable<TModel>> GetAllTeamsAsync<TModel>();
     }
 }

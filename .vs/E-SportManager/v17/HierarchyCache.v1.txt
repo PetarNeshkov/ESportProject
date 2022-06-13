@@ -6,64 +6,144 @@ i:{00000000-0000-0000-0000-000000000000}:Solution Items
 i:{6dbed962-56ab-4f50-8512-2dd3b314b84c}:C:\Users\User\Desktop\Interview\ESportProject\.editorconfig
 i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\.editorconfig
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\.editorconfig
+++Data
+i:{00000000-0000-0000-0000-000000000000}:Data
+++E-SportManager.Data
+i:{8e66b829-8cb6-4505-8a8d-884e4db65c89}:E-SportManager.Data
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\e-sportmanager.data.csproj
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\bin\debug\net6.0\e-sportmanager.data.dll
+++Dependencies
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>1126
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:>1122
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:>1123
+i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:>1124
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1125
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1749
+++Configuration
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\configuration\
+++Migrations
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\
+++ESportDbContext.cs
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\esportdbcontext.cs
+++Analyzers
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:analyzers
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:analyzers
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:analyzers
+i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:analyzers
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:analyzers
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:analyzers
+++Frameworks
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:frameworks
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:frameworks
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:frameworks
+i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:frameworks
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:frameworks
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:frameworks
+++Packages
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:packages
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:packages
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:packages
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:packages
+++Projects
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:projects
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:projects
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:projects
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:projects
+++TeamConfiguration.cs
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\configuration\teamconfiguration.cs
+++20220612131900_initial.cs
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\20220612131900_initial.cs
+++20220612132842_addImageUrlToTeams.cs
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\20220612132842_addimageurltoteams.cs
+++ESportDbContextModelSnapshot.cs
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\esportdbcontextmodelsnapshot.cs
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++System.Text.Json.SourceGeneration
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.NETCore.App
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\microsoft.netcore.app
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\microsoft.netcore.app
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\microsoft.netcore.app
+i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\users\user\desktop\interview\esportproject\globalconstants\e-sportmanager.common\microsoft.netcore.app
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\microsoft.netcore.app
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\microsoft.netcore.app
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.5)
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>1806
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1822
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.5)
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>1804
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1818
+++E-SportManager.Data.Models
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\bin\debug\net6.0\e-sportmanager.data.models.dll
+i:{8e66b829-8cb6-4505-8a8d-884e4db65c89}:E-SportManager.Data.Models
+++20220612131900_initial.Designer.cs
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\20220612131900_initial.designer.cs
+++20220612132842_addImageUrlToTeams.Designer.cs
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\20220612132842_addimageurltoteams.designer.cs
+++enums
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\enums\
+++Player.cs
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\player.cs
+++Team.cs
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\team.cs
+++User.cs
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\user.cs
+++Division.cs
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\enums\division.cs
+++Role.cs
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\enums\role.cs
+++Microsoft.Extensions.Identity.Stores (6.0.5)
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:>1795
+++E-SportManager.Data.Common
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\bin\debug\net6.0\e-sportmanager.data.common.dll
+i:{8e66b829-8cb6-4505-8a8d-884e4db65c89}:E-SportManager.Data.Common
+++Models
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\models\
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\players\models\
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\teams\models\
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\
+++DataValidation.cs
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\datavalidation.cs
+++BaseModel.cs
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\models\basemodel.cs
+++IAuditInfo.cs
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\models\iauditinfo.cs
 ++GlobalConstants
 i:{00000000-0000-0000-0000-000000000000}:GlobalConstants
 ++E-SportManager.Common
 i:{2043adde-f993-4e77-b625-50e9168a0faa}:E-SportManager.Common
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\globalconstants\e-sportmanager.common\bin\debug\net6.0\e-sportmanager.common.dll
-++Dependencies
-i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:>1106
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1110
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>1109
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:>1107
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:>1108
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1731
 ++ErrorMessages.cs
 i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\users\user\desktop\interview\esportproject\globalconstants\e-sportmanager.common\errormessages.cs
 ++GlobalConstants.cs
 i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\users\user\desktop\interview\esportproject\globalconstants\e-sportmanager.common\globalconstants.cs
-++Analyzers
-i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:analyzers
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:analyzers
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:analyzers
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:analyzers
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:analyzers
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:analyzers
-++Frameworks
-i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:frameworks
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:frameworks
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:frameworks
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:frameworks
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:frameworks
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:frameworks
-++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-++Microsoft.CodeAnalysis.NetAnalyzers
-i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-++System.Text.Json.SourceGeneration
-i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-++Microsoft.NETCore.App
-i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:c:\users\user\desktop\interview\esportproject\globalconstants\e-sportmanager.common\microsoft.netcore.app
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\microsoft.netcore.app
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\microsoft.netcore.app
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\microsoft.netcore.app
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\microsoft.netcore.app
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\microsoft.netcore.app
 ++Services
 i:{00000000-0000-0000-0000-000000000000}:Services
 ++E-SportManager.Service.Data
@@ -81,11 +161,8 @@ i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportp
 i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\teams\
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\teams\
-++Models
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\teams\models\
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\models\
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\players\models\
+++PlayerListServiceModel.cs
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\teams\models\playerlistservicemodel.cs
 ++TeamImageServiceModel.cs
 i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\teams\models\teamimageservicemodel.cs
 ++ITeamService.cs
@@ -94,108 +171,25 @@ i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportp
 i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\teams\teamservice.cs
 ++Users
 i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\users\
-++Packages
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:packages
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:packages
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:packages
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:packages
-++Projects
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:projects
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:projects
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:projects
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:projects
 ++IUserService.cs
 i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\users\iuserservice.cs
 ++UserService.cs
 i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\users\userservice.cs
-++Microsoft.EntityFrameworkCore.Analyzers
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-++Microsoft.Extensions.Logging.Generators
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 ++AutoMapper (11.0.1)
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1787
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1804
-++E-SportManager.Data
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\bin\debug\net6.0\e-sportmanager.data.dll
-i:{8e66b829-8cb6-4505-8a8d-884e4db65c89}:E-SportManager.Data
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\bin\debug\net6.0\e-sportmanager.data.dll
-++Data
-i:{00000000-0000-0000-0000-000000000000}:Data
-++Migrations
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\
-++ESportDbContext.cs
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\esportdbcontext.cs
-++20220610203946_initial.cs
-++ESportDbContextModelSnapshot.cs
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\esportdbcontextmodelsnapshot.cs
-++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.5)
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>1792
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1803
-++Microsoft.EntityFrameworkCore.SqlServer (6.0.5)
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>1788
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1799
-++E-SportManager.Data.Models
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\bin\debug\net6.0\e-sportmanager.data.models.dll
-i:{8e66b829-8cb6-4505-8a8d-884e4db65c89}:E-SportManager.Data.Models
-++20220610203946_initial.Designer.cs
-++enums
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\enums\
-++Player.cs
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\player.cs
-++Team.cs
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\team.cs
-++Division.cs
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\enums\division.cs
-++Role.cs
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\enums\role.cs
-++E-SportManager.Data.Common
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\bin\debug\net6.0\e-sportmanager.data.common.dll
-i:{8e66b829-8cb6-4505-8a8d-884e4db65c89}:E-SportManager.Data.Common
-++DataValidation.cs
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\datavalidation.cs
-++BaseModel.cs
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\models\basemodel.cs
-++IAuditInfo.cs
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\models\iauditinfo.cs
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1758
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1823
+++Microsoft.AspNetCore.Mvc.Core (2.2.5)
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1759
 ++Web
 i:{00000000-0000-0000-0000-000000000000}:Web
 ++E-SportManager.Web
 i:{68840d6a-e447-4e8a-971b-6847109acc13}:E-SportManager.Web
 ++Connected Services 
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1732
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1750
 ++Properties
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\properties\
 ++wwwroot
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\
-++css
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\css\
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\css\
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\dist\css\
-++addPlayer.css
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\css\addplayer.css
-++site.css
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\css\site.css
-++js
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\js\
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\js\
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\dist\js\
-++addForm.js
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\js\addform.js
-++selectize.js
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\js\selectize.js
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\selectize.js
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\dist\js\standalone\selectize.js
-++site.js
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\js\site.js
-++lib
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\
-++favicon.ico
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\favicon.ico
 ++Areas
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\
 ++Controllers
@@ -212,21 +206,14 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\controllers\teamscontroller.cs
 ++Infrastructure
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\infrastructure\
+++AddTeamFormModel.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\addteamformmodel.cs
 ++ErrorViewModel.cs
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\errorviewmodel.cs
 ++Views
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\
 ++Home
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\home\
-++All.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\all.cshtml
-++Create.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\create.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\teams\create.cshtml
-++Details.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\details.cshtml
-++Edit.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\edit.cshtml
 ++Shared
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\shared\
 ++_Layout.cshtml
@@ -238,6 +225,9 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\_validationscriptspartial.cshtml
 ++Error.cshtml
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\shared\error.cshtml
+++Create.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\teams\create.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\create.cshtml
 ++_ViewImports.cshtml
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\_viewimports.cshtml
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\_viewimports.cshtml
@@ -252,21 +242,23 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 ++Program.cs
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\program.cs
 ++SQL Server Express LocalDB (Local) (ConnectionStrings:DefaultConnection)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1812
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1836
 ++launchSettings.json
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\properties\launchsettings.json
 ++serviceDependencies.json
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\properties\servicedependencies.json
-++bootstrap
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\
-++jquery
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery\
-++jquery-validation
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery-validation\
-++jquery-validation-unobtrusive
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery-validation-unobtrusive\
-++selectize
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\
+++css
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\css\
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\css\
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\dist\css\
+++js
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\js\
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\js\
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\dist\js\
+++lib
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\
+++favicon.ico
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\favicon.ico
 ++Identity
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\
 ++ClaimsPrincipalExtensions.cs
@@ -287,12 +279,16 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\playerdetailsviewmodel.cs
 ++PlayerServiceModel.cs
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\playerservicemodel.cs
-++AddTeamFormModel.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\addteamformmodel.cs
 ++Index.cshtml
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\home\index.cshtml
 ++Privacy.cshtml
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\home\privacy.cshtml
+++All.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\all.cshtml
+++Details.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\details.cshtml
+++Edit.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\edit.cshtml
 ++_Layout.cshtml.css
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\shared\_layout.cshtml.css
 ++appsettings.Development.json
@@ -320,19 +316,43 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\sdk\6.0.202\sdk
 ++Microsoft.AspNetCore.App
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\microsoft.aspnetcore.app
 ++AutoMapper.Extensions.Microsoft.DependencyInjection (11.0.0)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1800
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1819
 ++Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (6.0.5)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1802
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1821
 ++Microsoft.AspNetCore.Identity.UI (6.0.5)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1807
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1826
 ++Microsoft.EntityFrameworkCore.Tools (6.0.5)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1805
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1824
 ++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.5)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1806
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1825
 ++Swashbuckle.AspNetCore (6.3.0)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1801
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1820
 ++serviceDependencies.local.json
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\properties\servicedependencies.local.json
+++addPlayer.css
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\css\addplayer.css
+++site.css
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\css\site.css
+++addForm.js
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\js\addform.js
+++selectize.js
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\js\selectize.js
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\selectize.js
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\dist\js\standalone\selectize.js
+++site.js
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\js\site.js
+++bootstrap
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\
+++jquery
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery\
+++jquery-validation
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery-validation-unobtrusive\
+++selectize
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\
+++Pages
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\
 ++dist
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery\dist\
@@ -349,8 +369,8 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 ++src
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\
-++Pages
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\
+++Account
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\
 ++jquery.js
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\jquery\dist\jquery.js
 ++additional-methods.js
@@ -379,8 +399,10 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\defaults.js
 ++utils.js
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\utils.js
-++Account
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\
+++Login.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\login.cshtml
+++Register.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\register.cshtml
 ++bootstrap.css
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\css\bootstrap.css
 ++bootstrap-grid.css
@@ -435,10 +457,10 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\plugins\tag_limit\
 ++selectize.jquery.js
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\selectize.jquery.js
-++Login.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\login.cshtml
-++Register.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\register.cshtml
+++Login.cshtml.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\login.cshtml.cs
+++Register.cshtml.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\register.cshtml.cs
 ++bootstrap.css.map
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 ++bootstrap.min.css
@@ -546,10 +568,6 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\plugins\dropdown_header\plugin.scss
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\plugins\optgroup_columns\plugin.scss
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\selectize\src\plugins\remove_button\plugin.scss
-++Login.cshtml.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\login.cshtml.cs
-++Register.cshtml.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\identity\pages\account\register.cshtml.cs
 ++bootstrap.min.css.map
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
 ++bootstrap.rtl.css.map
@@ -598,32 +616,3 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
 ++bootstrap.esm.min.js.map
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-++User.cs
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\user.cs
-++Microsoft.Extensions.Identity.Stores (6.0.5)
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:>1816
-++20220612120334_addedUserDataTable.cs
-++20220612120334_addedUserDataTable.Designer.cs
-++NewFolder
-++Configuration
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\configuration\
-++TeamConfiguration.cs
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\configuration\teamconfiguration.cs
-++20220612130446_changedTeam-PlayerRelation.cs
-++20220612130446_changedTeam-PlayerRelation.Designer.cs
-++20220612131245_changedTeam-PlayerRelation.cs
-++20220612131245_changedTeam-PlayerRelation.Designer.cs
-++20220612131512_changedTeam-PlayerRelation.cs
-++20220612131512_changedTeam-PlayerRelation.Designer.cs
-++20220612131900_initial.cs
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\20220612131900_initial.cs
-++20220612131900_initial.Designer.cs
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\20220612131900_initial.designer.cs
-++20220612132842_addImageUrlToTeams.cs
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\20220612132842_addimageurltoteams.cs
-++20220612132842_addImageUrlToTeams.Designer.cs
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data\e-sportmanager.data\migrations\20220612132842_addimageurltoteams.designer.cs
-++LanersFormModel.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\lanersformmodel.cs
-++PlayerListServiceModel.cs
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\teams\models\playerlistservicemodel.cs

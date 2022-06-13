@@ -96,10 +96,20 @@ namespace E_SportManager.Controllers
             //    return Unauthorized();
             //}
 
+            var isExisting = await playerService.IsExistingAsync(input.Name);
+
+            if (isExisting)
+            {
+                ModelState.AddModelError(input.Name, PlayerExistingErrorMessage);
+                return View(input);
+            }
+
+
             await playerService.EditPlayerAsync(
                 input.Id,
                 input.Name,
                 input.ImageUrl,
+                input.YearsOfExperience,
                 input.Role,
                 input.Division,
                 input.Description);

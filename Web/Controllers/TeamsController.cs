@@ -5,6 +5,7 @@ using E_SportManager.Service.Data.Teams;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+using static E_SportManager.Common.GlobalConstants;
 using static E_SportManager.Common.ErrorMessages.Team;
 
 namespace E_SportManager.Controllers
@@ -76,7 +77,19 @@ namespace E_SportManager.Controllers
                 input.SupportLaner,
                 User.Id());
 
+            TempData[GlobalMessageKey] = $"Team was successfully created!";
+
             return View(input);
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> All(AllTeamsQueryModel query)
+        {
+            var teams = await teamService.GetAllTeamsAsync<TeamServiceModel>();
+
+            query.Teams = teams;
+
+            return View(query);
         }
     }
 }

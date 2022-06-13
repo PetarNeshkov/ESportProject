@@ -13,7 +13,7 @@ namespace E_SportManager.Service.Data.Players
 
         Task<TModel> GetByIdAsync<TModel>(int id);
 
-        Task EditPlayerAsync(int playerId,string name,string imageUrl,string role,string division,
+        Task EditPlayerAsync(int playerId,string name,string imageUrl, int yearsOfExperience, string role,string division,
             string description);
 
         Task DeletePlayerAsync(int id);
