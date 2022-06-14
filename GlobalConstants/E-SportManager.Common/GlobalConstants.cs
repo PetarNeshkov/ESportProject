@@ -31,7 +31,8 @@
         {
             public const string AdministratorRoleName = "Administrator";
             public const string AdministratorUsername = "Admin";
-            
+            public const string AdministratorEmail = "admin@esportmanager.net";
+            public const string AdministratorPassword = "admin567";
         }
     }
 }

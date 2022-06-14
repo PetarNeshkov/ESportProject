@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-using YourMoviesForum.Data.Common.Models;
+﻿using E_SportManager.Data.Common.Models;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace E_SportManager.Data
 {

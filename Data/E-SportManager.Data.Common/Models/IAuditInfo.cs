@@ -1,6 +1,6 @@
-﻿using System;
+﻿
 
-namespace YourMoviesForum.Data.Common.Models
+namespace E_SportManager.Data.Common.Models
 {
     public interface IAuditInfo
     {

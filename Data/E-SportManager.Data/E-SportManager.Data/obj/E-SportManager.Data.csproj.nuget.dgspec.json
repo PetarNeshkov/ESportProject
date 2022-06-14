@@ -148,6 +148,9 @@
             "projectReferences": {
               "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\Data\\E-SportManager.Data.Models\\E-SportManager.Data.Models.csproj": {
                 "projectPath": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\Data\\E-SportManager.Data.Models\\E-SportManager.Data.Models.csproj"
+              },
+              "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\GlobalConstants\\E-SportManager.Common\\E-SportManager.Common.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\GlobalConstants\\E-SportManager.Common\\E-SportManager.Common.csproj"
               }
             }
           }
@@ -171,6 +174,60 @@
               "version": "[6.0.5, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\GlobalConstants\\E-SportManager.Common\\E-SportManager.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\GlobalConstants\\E-SportManager.Common\\E-SportManager.Common.csproj",
+        "projectName": "E-SportManager.Common",
+        "projectPath": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\GlobalConstants\\E-SportManager.Common\\E-SportManager.Common.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\GlobalConstants\\E-SportManager.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",

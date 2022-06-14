@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using YourMoviesForum.Data.Common.Models;
-
 
 namespace E_SportManager.Data.Common.Models
 {

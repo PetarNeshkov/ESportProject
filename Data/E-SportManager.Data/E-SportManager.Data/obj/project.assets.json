@@ -657,6 +657,16 @@
           }
         }
       },
+      "E-SportManager.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/E-SportManager.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E-SportManager.Common.dll": {}
+        }
+      },
       "E-SportManager.Data.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1936,6 +1946,11 @@
         "version.txt"
       ]
     },
+    "E-SportManager.Common/1.0.0": {
+      "type": "project",
+      "path": "../../../GlobalConstants/E-SportManager.Common/E-SportManager.Common.csproj",
+      "msbuildProject": "../../../GlobalConstants/E-SportManager.Common/E-SportManager.Common.csproj"
+    },
     "E-SportManager.Data.Common/1.0.0": {
       "type": "project",
       "path": "../../E-SportManager.Data.Common/E-SportManager.Data.Common.csproj",
@@ -1949,6 +1964,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "E-SportManager.Common >= 1.0.0",
       "E-SportManager.Data.Models >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.5"
@@ -1983,6 +1999,9 @@
           "projectReferences": {
             "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\Data\\E-SportManager.Data.Models\\E-SportManager.Data.Models.csproj": {
               "projectPath": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\Data\\E-SportManager.Data.Models\\E-SportManager.Data.Models.csproj"
+            },
+            "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\GlobalConstants\\E-SportManager.Common\\E-SportManager.Common.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Interview\\ESportProject\\GlobalConstants\\E-SportManager.Common\\E-SportManager.Common.csproj"
             }
           }
         }
