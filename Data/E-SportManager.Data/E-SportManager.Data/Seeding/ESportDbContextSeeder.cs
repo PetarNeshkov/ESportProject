@@ -18,10 +18,11 @@ namespace Microsoft.Extensions.DependencyInjection
                 throw new ArgumentNullException(nameof(serviceProvider));
             }
 
-            var seeders=new List<ISeeder>()
+            var seeders = new List<ISeeder>()
             {
                 new AdministratorSeeder(),
                 new PlayerSeeder(),
+                new TeamSeeder()
             };
 
             foreach (var seeder in seeders)

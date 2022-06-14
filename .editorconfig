@@ -23,6 +23,9 @@ dotnet_diagnostic.CS8603.severity = silent
 # CS8766: Nullability of reference types in return type doesn't match implicitly implemented member (possibly because of nullability attributes).
 dotnet_diagnostic.CS8766.severity = silent
 
+# CS8601: Possible null reference assignment.
+dotnet_diagnostic.CS8601.severity = none
+
 [*.{cs,vb}]
 #### Naming styles ####
 
