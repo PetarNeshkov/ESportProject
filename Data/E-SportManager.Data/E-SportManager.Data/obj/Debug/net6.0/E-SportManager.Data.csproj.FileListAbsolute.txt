@@ -30,3 +30,5 @@ C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data\E-SportMa
 C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data\E-SportManager.Data\obj\Debug\net6.0\ref\E-SportManager.Data.dll
 C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Data.Common.dll
 C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Data.Common.pdb
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Common.dll
+C:\Users\User\Desktop\Interview\ESportProject\Data\E-SportManager.Data\E-SportManager.Data\bin\Debug\net6.0\E-SportManager.Common.pdb

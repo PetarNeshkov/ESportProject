@@ -20,7 +20,8 @@ namespace Microsoft.Extensions.DependencyInjection
 
             var seeders=new List<ISeeder>()
             {
-                new AdministratorSeeder()
+                new AdministratorSeeder(),
+                new PlayerSeeder(),
             };
 
             foreach (var seeder in seeders)

@@ -19,6 +19,8 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 var role = new IdentityRole { Name = AdministratorRoleName };
 
+                await roleManager.CreateAsync(role);
+
                 var admin = new User
                 {
                     UserName = AdministratorUsername,
