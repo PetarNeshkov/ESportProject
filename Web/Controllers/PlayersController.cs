@@ -37,23 +37,24 @@ namespace E_SportManager.Controllers
 
             if (isExisting)
             {
-                ModelState.AddModelError(input.Name, PlayerExistingErrorMessage);
+                ModelState.AddModelError(nameof(input.Name), PlayerExistingErrorMessage);
                 return View(input);
             }
 
 
-            await playerService.CreatePlayerAsync(
+            var playerId=await playerService.CreatePlayerAsync(
                 input.Name,
                 input.ImageUrl,
                 input.YearsOfExperience,
                 input.Role,
                 input.Division,
-                input.Description);
+                input.Description,
+                User.Id());
 
 
-            TempData[GlobalMessageKey] = $"Player was successfully created!";
+            TempData[GlobalMessageKey] = "Player was successfully created and is awaiting for approval!";
 
-            return RedirectToAction(nameof(All));
+            return RedirectToAction(nameof(Details),new {id=playerId});
         }
 
         [AllowAnonymous]
@@ -105,7 +106,7 @@ namespace E_SportManager.Controllers
 
             if (isExisting)
             {
-                ModelState.AddModelError(input.Name, PlayerExistingErrorMessage);
+                ModelState.AddModelError(nameof(input.Name), PlayerExistingErrorMessage);
                 return View(input);
             }
 
@@ -117,11 +118,12 @@ namespace E_SportManager.Controllers
                 input.YearsOfExperience,
                 input.Role,
                 input.Division,
-                input.Description);
+                input.Description,
+                input.IsPublic);
 
-            TempData[GlobalMessageKey] = $"Player was successfully edited!";
+            TempData[GlobalMessageKey] = "Player was successfully edited!";
 
-            return RedirectToAction(nameof(All));
+            return RedirectToAction(nameof(Details), new {id=input.Id});
         }
 
         [HttpPost]
@@ -141,7 +143,7 @@ namespace E_SportManager.Controllers
 
             await playerService.DeletePlayerAsync(id);
 
-            TempData[GlobalMessageKey] = $"Player was successfully deleted!";
+            TempData[GlobalMessageKey] = "Player was successfully deleted!";
 
 
             return RedirectToAction(nameof(All));

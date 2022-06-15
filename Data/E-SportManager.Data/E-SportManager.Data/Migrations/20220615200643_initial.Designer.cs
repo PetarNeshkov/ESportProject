@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_SportManager.Data.Migrations
 {
     [DbContext(typeof(ESportDbContext))]
-    [Migration("20220612131900_initial")]
+    [Migration("20220615200643_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,10 @@ namespace E_SportManager.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AuthorId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreatedOn")
                         .HasColumnType("nvarchar(max)");
@@ -54,6 +58,9 @@ namespace E_SportManager.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsPublic")
+                        .HasColumnType("bit");
+
                     b.Property<string>("ModifiedOn")
                         .HasColumnType("nvarchar(max)");
 
@@ -70,6 +77,8 @@ namespace E_SportManager.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
 
                     b.ToTable("Players");
                 });
@@ -93,6 +102,10 @@ namespace E_SportManager.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DeletedOn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -352,6 +365,17 @@ namespace E_SportManager.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("E_SportManager.Data.Player", b =>
+                {
+                    b.HasOne("E_SportManager.Data.User", "Author")
+                        .WithMany("Players")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
             modelBuilder.Entity("E_SportManager.Data.Team", b =>
                 {
                     b.HasOne("E_SportManager.Data.User", "Author")
@@ -469,6 +493,8 @@ namespace E_SportManager.Data.Migrations
 
             modelBuilder.Entity("E_SportManager.Data.User", b =>
                 {
+                    b.Navigation("Players");
+
                     b.Navigation("Teams");
                 });
 #pragma warning restore 612, 618

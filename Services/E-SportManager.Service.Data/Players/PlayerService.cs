@@ -19,13 +19,14 @@ namespace E_SportManager.Service.Data
             this.mapper = mapper;
         }
 
-        public async Task CreatePlayerAsync(
+        public async Task<int> CreatePlayerAsync(
             string name,
             string imageUrl, 
             int yearsOfExperience, 
             string role, 
             string division, 
-            string description)
+            string description,
+            string userId)
         {
             var player = new Player
             {
@@ -34,11 +35,15 @@ namespace E_SportManager.Service.Data
                 YearsOfExperience = yearsOfExperience,
                 Role =role,
                 Division = division,
-                Description = description
+                Description = description,
+                AuthorId=userId,
+                IsPublic = false
             };
 
             await data.Players.AddAsync(player);
             await data.SaveChangesAsync();
+
+            return player.Id;
         }
 
         public async Task DeletePlayerAsync(int id)
@@ -46,12 +51,13 @@ namespace E_SportManager.Service.Data
             var player = await GetByIdAsync(id);
 
             player.IsDeleted = true;
+            player.IsPublic = false;
             player.DeletedOn= DateTime.UtcNow.ToLocalTime().ToString("dd/MM/yyyy H:mm");
 
             await data.SaveChangesAsync();
         }
 
-        public async Task EditPlayerAsync(int playerId, string name, string imageUrl, int yearsOfExperience,string role, string division, string description)
+        public async Task EditPlayerAsync(int playerId, string name, string imageUrl, int yearsOfExperience,string role, string division, string description,bool isPublic)
         {
             var player = await GetByIdAsync(playerId);
 
@@ -61,16 +67,35 @@ namespace E_SportManager.Service.Data
             player.YearsOfExperience= yearsOfExperience;
             player.Division = division;
             player.Description = description;
+            player.IsPublic = isPublic;
 
             await data.SaveChangesAsync();
+        }
+        public void ChangeVisibility(int id)
+        {
+            var player =  data.Players.First(x=>x.Id==id);
+
+            //var player = this.data.Players.FindAsync(id);
+
+            player.IsPublic= !player.IsPublic;
+
+            data.SaveChanges();
         }
 
         public async Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>(int skip=0,bool publicOnly = true)
             =>await data.Players
                  .AsNoTracking()
                  .OrderByDescending(p=>p.CreatedOn)
-                 .Where(p=>!p.IsDeleted)
+                 .Where(p=>!p.IsDeleted && (!publicOnly || p.IsPublic))
                  .Skip(skip).Take(PlayersPerPage)
+                 .ProjectTo<TModel>(mapper.ConfigurationProvider)
+                 .ToListAsync();
+
+        public async Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>(bool publicOnly = true)
+            => await data.Players
+                 .AsNoTracking()
+                 .OrderByDescending(p => p.CreatedOn)
+                 .Where(p => !p.IsDeleted && (!publicOnly || p.IsPublic))
                  .ProjectTo<TModel>(mapper.ConfigurationProvider)
                  .ToListAsync();
 
@@ -90,5 +115,6 @@ namespace E_SportManager.Service.Data
         public async Task<Player> GetByIdAsync(int id)
            => await data.Players.FirstOrDefaultAsync(p => p.Id == id && !p.IsDeleted);
 
+       
     }
 }

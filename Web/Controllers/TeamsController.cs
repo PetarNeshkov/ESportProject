@@ -52,7 +52,7 @@ namespace E_SportManager.Controllers
 
             if (isExisting)
             {
-                ModelState.AddModelError(input.Title, TeamExistingErrorMessage);
+                ModelState.AddModelError(nameof(input.Title), TeamExistingErrorMessage);
 
                 input.MidLaners = await teamService.GetRoleAsync(Role.Mid);
                 input.BottomLaners = await teamService.GetRoleAsync(Role.Bottom);
@@ -73,7 +73,7 @@ namespace E_SportManager.Controllers
                 input.SupportLaner,
                 User.Id());
 
-            TempData[GlobalMessageKey] = $"Team was successfully created!";
+            TempData[GlobalMessageKey] = "Team was successfully created!";
 
             return RedirectToAction(nameof(All));
         }
@@ -110,7 +110,7 @@ namespace E_SportManager.Controllers
 
             await teamService.DeleteTeamAsync(id);
 
-            TempData[GlobalMessageKey] = $"Team was successfully deleted!";
+            TempData[GlobalMessageKey] = "Team was successfully deleted!";
 
             return RedirectToAction(nameof(All));
         }
@@ -157,7 +157,7 @@ namespace E_SportManager.Controllers
 
             if (isExisting)
             {
-                ModelState.AddModelError(input.Title, TeamExistingErrorMessage);
+                ModelState.AddModelError(nameof(input.Title), TeamExistingErrorMessage);
 
                 input.MidLaners = await teamService.GetRoleAsync(Role.Mid);
                 input.BottomLaners = await teamService.GetRoleAsync(Role.Bottom);

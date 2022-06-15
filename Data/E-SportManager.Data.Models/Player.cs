@@ -37,6 +37,12 @@ namespace E_SportManager.Data
         [MaxLength(PlayerDescriptionMaxLength)]
         public string Description { get; set; }
 
+        public string AuthorId { get; set; }
+
+        public User Author { get; set; }
+
+        public bool IsPublic { get; set; }
+
         public ICollection<Team> MidLaners { get; init; }
         public ICollection<Team> TopLaners { get; init; }
         public ICollection<Team> JungleLaners { get; init; }
