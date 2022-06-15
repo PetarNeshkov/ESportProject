@@ -36,6 +36,6 @@ namespace E_SportManager.Models.Players
             MinimumLength = PlayerDescriptionMinLength)]
         public string Description { get; init; }
 
-        public bool IsPublic { get; init; }
+        public string? AuthorId { get; init; }
     }
 }

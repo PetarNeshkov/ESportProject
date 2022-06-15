@@ -57,7 +57,7 @@ namespace E_SportManager.Service.Data
             await data.SaveChangesAsync();
         }
 
-        public async Task EditPlayerAsync(int playerId, string name, string imageUrl, int yearsOfExperience,string role, string division, string description,bool isPublic)
+        public async Task EditPlayerAsync(int playerId, string name, string imageUrl, int yearsOfExperience,string role, string division, string description,bool isPublic=false)
         {
             var player = await GetByIdAsync(playerId);
 
@@ -74,8 +74,6 @@ namespace E_SportManager.Service.Data
         public void ChangeVisibility(int id)
         {
             var player =  data.Players.First(x=>x.Id==id);
-
-            //var player = this.data.Players.FindAsync(id);
 
             player.IsPublic= !player.IsPublic;
 
@@ -110,11 +108,19 @@ namespace E_SportManager.Service.Data
             =>await data.Players.Where(p => !p.IsDeleted).CountAsync();
 
         public async Task<bool> IsExistingAsync(string name)
-            => await data.Players.AnyAsync(p => p.Name == name && !p.IsDeleted);
+          => await data.Players.AnyAsync(p => p.Name == name && !p.IsDeleted);
+
+        public async Task<bool> IsExistingAsync(string name,int id)
+            => await data.Players.AnyAsync(p => p.Name == name && p.Id!=id &&!p.IsDeleted);
 
         public async Task<Player> GetByIdAsync(int id)
            => await data.Players.FirstOrDefaultAsync(p => p.Id == id && !p.IsDeleted);
 
-       
+        public async Task<string> GetPlayerAuthorIdAsync(int id)
+             => await data.Players
+                 .AsNoTracking()
+                 .Where(p => p.Id == id && !p.IsDeleted)
+                 .Select(p => p.AuthorId)
+                 .FirstOrDefaultAsync();
     }
 }

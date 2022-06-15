@@ -12,23 +12,23 @@ using static E_SportManager.Common.GlobalConstants.Player;
 namespace E_SportManager.Controllers
 {
     [Authorize]
-    public class PlayersController:Controller
+    public class PlayersController : Controller
     {
         private readonly ESportDbContext data;
         private readonly IPlayerService playerService;
 
-        public PlayersController(ESportDbContext data,IPlayerService playerService)
+        public PlayersController(ESportDbContext data, IPlayerService playerService)
         {
             this.data = data;
             this.playerService = playerService;
         }
 
-        public IActionResult Create()=>View();
+        public IActionResult Create() => View();
 
         [HttpPost]
         public async Task<IActionResult> Create(AddPlayerFormModel input)
         {
-            var isExisting= await playerService.IsExistingAsync(input.Name);
+            var isExisting = await playerService.IsExistingAsync(input.Name);
 
             if (!ModelState.IsValid)
             {
@@ -42,7 +42,7 @@ namespace E_SportManager.Controllers
             }
 
 
-            var playerId=await playerService.CreatePlayerAsync(
+            var playerId = await playerService.CreatePlayerAsync(
                 input.Name,
                 input.ImageUrl,
                 input.YearsOfExperience,
@@ -54,37 +54,36 @@ namespace E_SportManager.Controllers
 
             TempData[GlobalMessageKey] = "Player was successfully created and is awaiting for approval!";
 
-            return RedirectToAction(nameof(Details),new {id=playerId});
+            return RedirectToAction(nameof(Details), new { id = playerId });
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> All(AllPlayersQueryModel query, int page=1)
+        public async Task<IActionResult> All(AllPlayersQueryModel query, int page = 1)
         {
             var count = await playerService.GetTotalPlayersCountAsync();
-            var skip=(page - 1) * PlayersPerPage;
+            var skip = (page - 1) * PlayersPerPage;
 
-            var players =await playerService.GetAllPlayersAsync<PlayerServiceModel>(skip);
+            var players = await playerService.GetAllPlayersAsync<PlayerServiceModel>(skip);
 
             query.Players = players;
-            query.Pagination=PaginationProvider.PaginationHelper(page,count,PlayersPerPage);
+            query.Pagination = PaginationProvider.PaginationHelper(page, count, PlayersPerPage);
 
             return View(query);
         }
 
-        //[Authorize(Roles = Administrator.AdministratorRoleName)]
         public async Task<IActionResult> Edit(int id)
         {
-            var player= await playerService.GetByIdAsync<EditPlayerFormModel>(id);
+            var player = await playerService.GetByIdAsync<EditPlayerFormModel>(id);
 
             if (player == null)
             {
                 return NotFound();
             }
 
-            //if (!User.IsAdministrator())
-            //{
-            //    return Unauthorized();
-            //}
+            if (User.IsAdministrator() || player.AuthorId!=User.Id())
+            {
+                return Unauthorized();
+            }
 
             return View(player);
         }
@@ -97,12 +96,14 @@ namespace E_SportManager.Controllers
                 return View(input);
             }
 
-            //if (!User.IsAdministrator())
-            //{
-            //    return Unauthorized();
-            //}
+            var playerAuthorId = await playerService.GetPlayerAuthorIdAsync(input.Id);
 
-            var isExisting = await playerService.IsExistingAsync(input.Name);
+            if (User.IsAdministrator() || playerAuthorId!=User.Id())
+            {
+                return Unauthorized();
+            }
+
+            var isExisting = await playerService.IsExistingAsync(input.Name,input.Id);
 
             if (isExisting)
             {
@@ -118,10 +119,9 @@ namespace E_SportManager.Controllers
                 input.YearsOfExperience,
                 input.Role,
                 input.Division,
-                input.Description,
-                input.IsPublic);
+                input.Description);
 
-            TempData[GlobalMessageKey] = "Player was successfully edited!";
+            TempData[GlobalMessageKey] = "Player was successfully edited and awaiting for approval!";
 
             return RedirectToAction(nameof(Details), new {id=input.Id});
         }
@@ -136,10 +136,10 @@ namespace E_SportManager.Controllers
                 return NotFound();
             }
 
-            //if (!User.IsAdministrator())
-            //{
-            //    return Unauthorized();
-            //}
+            if (User.IsAdministrator() || player.AuthorId!=User.Id())
+            {
+                return Unauthorized();
+            }
 
             await playerService.DeletePlayerAsync(id);
 

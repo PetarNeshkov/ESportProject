@@ -102,10 +102,11 @@ namespace E_SportManager.Controllers
                 return NotFound();
             }
 
-            //if (!User.IsAdministrator())
-            //{
-            //    return Unauthorized();
-            //}
+
+            if (User.IsAdministrator() || team.AuthorId != User.Id())
+            {
+                return Unauthorized();
+            }
 
 
             await teamService.DeleteTeamAsync(id);
@@ -131,10 +132,10 @@ namespace E_SportManager.Controllers
                 return NotFound();
             }
 
-            //if (!User.IsAdministrator())
-            //{
-            //    return Unauthorized();
-            //}
+            if (User.IsAdministrator() || team.AuthorId != User.Id())
+            {
+                return Unauthorized();
+            }
 
             return View(team);
         }
@@ -170,7 +171,7 @@ namespace E_SportManager.Controllers
 
             var teamAuthorId = await teamService.GetTeamAuthorIdAsync(input.Id);
 
-            if (teamAuthorId != User.Id() && !User.IsAdministrator())
+            if (teamAuthorId != User.Id() && User.IsAdministrator())
             {
                 return Unauthorized();
             }

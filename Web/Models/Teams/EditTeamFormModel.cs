@@ -33,6 +33,8 @@ namespace E_SportManager.Models.Teams
         [Required]
         public string BottomLaner { get; init; }
 
+        public string? AuthorId { get; set; }
+
         public IEnumerable<PlayerListServiceModel>? MidLaners { get; set; }
         public IEnumerable<PlayerListServiceModel>? TopLaners { get; set; }
         public IEnumerable<PlayerListServiceModel>? SupportLaners { get; set; }
