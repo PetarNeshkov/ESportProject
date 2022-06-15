@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using E_SportManager.Areas.Admin.Models;
 using E_SportManager.Data;
 using E_SportManager.Models.Players;
 using E_SportManager.Models.Teams;
@@ -14,6 +15,8 @@ namespace E_SportManager
             CreateMap<Player, EditPlayerFormModel>();
             CreateMap<Player, PlayerDetailsViewModel>();
             CreateMap<Player, PlayerListServiceModel>();
+            CreateMap<Player, AdminPlayerServiceModel>();
+            CreateMap<Player, AllPlayersAdminQueryModel>();
 
             CreateMap<Team, TeamServiceModel>();
             CreateMap<Team, EditTeamFormModel>()
@@ -31,11 +34,7 @@ namespace E_SportManager
                 x => x.MapFrom(x => x.BottomLaner.Name))
              .ForMember(
                 x => x.SupportLaner,
-                x => x.MapFrom(x => x.SupportLaner.Name))
-             .ForMember(
-                x => x.SupportLaners,
-                x => x.AllowNull())
-             ;
+                x => x.MapFrom(x => x.SupportLaner.Name));
         }
     }
 }

@@ -23,17 +23,20 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark"  asp-area="" asp-controller="Players" asp-action="Create">Create Player</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark"  asp-area="" asp-controller="Teams" asp-action="Create">Create Team</a>
+                            </li>
+                        }
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Players" asp-action="Create">Create Player</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Players" asp-action="All">Players</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Players" asp-action="All">Players</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link text-dark" asp-controller="Teams" asp-action="Create">Create Team</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link text-dark" asp-controller="Teams" asp-action="All">Teams</a>
+                            <a class="nav-link text-dark"  asp-area="" asp-controller="Teams" asp-action="All">Teams</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -45,11 +48,11 @@
         </nav>
     </header>
     <div class="container">
-         @if (TempData.ContainsKey(GlobalConstants.GlobalMessageKey))
+        @if (TempData.ContainsKey(GlobalConstants.GlobalMessageKey))
         {
             <div class="alert alert-success text-center" role="alert">
                 @TempData[GlobalConstants.GlobalMessageKey]
-                
+
             </div>
         }
         <main role="main" class="pb-3">

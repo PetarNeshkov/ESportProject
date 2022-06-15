@@ -9,7 +9,7 @@ namespace E_SportManager.Service.Data.Players
 
         Task<bool> IsExistingAsync(string name);
 
-        Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>(int skip=0);
+        Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>(int skip=0,bool publicOnly=true);
 
         Task<TModel> GetByIdAsync<TModel>(int id);
 

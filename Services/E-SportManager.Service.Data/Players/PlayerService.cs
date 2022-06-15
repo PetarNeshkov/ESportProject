@@ -65,7 +65,7 @@ namespace E_SportManager.Service.Data
             await data.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>(int skip=0)
+        public async Task<IEnumerable<TModel>> GetAllPlayersAsync<TModel>(int skip=0,bool publicOnly = true)
             =>await data.Players
                  .AsNoTracking()
                  .OrderByDescending(p=>p.CreatedOn)
