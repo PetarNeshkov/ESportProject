@@ -42,5 +42,8 @@ namespace E_SportManager.Data
         public int JungleLanerId { get; set; }
 
         public Player JungleLaner { get; set; }
+
+        public int WonGames { get; set; }
+        public int LostGames { get; set; }
     }
 }
