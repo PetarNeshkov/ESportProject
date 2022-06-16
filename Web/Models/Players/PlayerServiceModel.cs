@@ -11,5 +11,7 @@
         public string Role { get; init; }
 
         public string Division { get; init; }
+
+        public string AuthorId { get; init; }
     }
 }

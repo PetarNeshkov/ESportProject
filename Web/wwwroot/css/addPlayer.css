@@ -74,7 +74,6 @@
 
 .player-details-img {
     width: 800px;
-    height: 500px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -154,6 +153,16 @@ main {
     margin-top: 30px;
     gap: 80px
 }
+
+.y-size{
+    font-size:20px;
+}
+
+#years {
+    display: block;
+    margin-top: -15px;
+}
+
 
 ul.pagination {
     text-align: center;

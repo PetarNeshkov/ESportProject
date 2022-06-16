@@ -103,7 +103,7 @@ namespace E_SportManager.Controllers
             }
 
 
-            if (User.IsAdministrator() || team.AuthorId != User.Id())
+            if (!User.IsAdministrator() || team.AuthorId != User.Id())
             {
                 return Unauthorized();
             }
@@ -132,7 +132,7 @@ namespace E_SportManager.Controllers
                 return NotFound();
             }
 
-            if (User.IsAdministrator() || team.AuthorId != User.Id())
+            if (!User.IsAdministrator() || team.AuthorId != User.Id())
             {
                 return Unauthorized();
             }

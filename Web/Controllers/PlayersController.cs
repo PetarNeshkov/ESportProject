@@ -80,7 +80,7 @@ namespace E_SportManager.Controllers
                 return NotFound();
             }
 
-            if (User.IsAdministrator() || player.AuthorId!=User.Id())
+            if (!User.IsAdministrator() || player.AuthorId!=User.Id())
             {
                 return Unauthorized();
             }
@@ -98,7 +98,7 @@ namespace E_SportManager.Controllers
 
             var playerAuthorId = await playerService.GetPlayerAuthorIdAsync(input.Id);
 
-            if (User.IsAdministrator() || playerAuthorId!=User.Id())
+            if (!User.IsAdministrator() || playerAuthorId!=User.Id())
             {
                 return Unauthorized();
             }
@@ -136,7 +136,7 @@ namespace E_SportManager.Controllers
                 return NotFound();
             }
 
-            if (User.IsAdministrator() || player.AuthorId!=User.Id())
+            if (!User.IsAdministrator() || player.AuthorId!=User.Id())
             {
                 return Unauthorized();
             }

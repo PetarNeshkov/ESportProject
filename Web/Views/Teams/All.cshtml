@@ -11,16 +11,19 @@
              class="player-img-top img-fluid player-image">
             <div class="player-body">
                 <h5 class="player-title text-center mt-3">@team.Title</h5>
-                 <form asp-controller="Players" 
-                asp-action="Delete" 
-                asp-route-id="@team.Id" 
-                method="post">
-                <div id="admin-btns">
-                    <a asp-controller="Teams" asp-action="Edit" asp-route-id="@team.Id"  class="col-lg-5 btn btn-outline mb-1 mt-3 pl-3" id="edit-btn">Edit</a>
-                    <button asp-controller="Teams" asp-action="Delete" asp-route-id="@team.Id" type="submit"  class="col-lg-5 btn btn-outline mb-1 mt-3" id="delete-btn">Delete</button>
-                </div>
-                <a asp-controller="Teams" asp-action="Details" asp-route-id="@team.Id"  class="col-md-12 btn btn-outline mb-4 " id="details-btn">Details</a>
-                </form>
+                @if (team.AuthorId == User.Id() || User.IsAdministrator())
+                {
+                    <form asp-controller="Players"
+                         asp-action="Delete"
+                         asp-route-id="@team.Id"
+                         method="post">
+                        <div id="admin-btns">
+                            <a asp-controller="Teams" asp-action="Edit" asp-route-id="@team.Id" class="col-lg-5 btn btn-outline mb-1 mt-3 pl-3" id="edit-btn">Edit</a>
+                            <button asp-controller="Teams" asp-action="Delete" asp-route-id="@team.Id" type="submit" class="col-lg-5 btn btn-outline mb-1 mt-3" id="delete-btn">Delete</button>
+                        </div>
+                    </form>
+                }
+               <a asp-controller="Teams" asp-action="Details" asp-route-id="@team.Id" class="col-md-12 btn btn-outline mb-4 " id="details-btn">Details</a>
             </div>
         </div>
     }

@@ -8,5 +8,7 @@
 
         public string ImageUrl { get; init; }
 
+        public string AuthorId { get; init; }
+
     }
 }
