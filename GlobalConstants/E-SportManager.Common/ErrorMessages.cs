@@ -14,6 +14,7 @@ namespace E_SportManager.Common
         {
            public const string NameLengthErrorMessage = "The {0} must be at least {2} and at max {1} characters long.";
            public const string TeamExistingErrorMessage = "There is already team with this name.";
+           public const string SameTeamExistingErrorMessage = "Cannot fight same team!";
         }
 
         public static class User

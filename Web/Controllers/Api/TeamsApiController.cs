@@ -1,8 +1,6 @@
-﻿using E_SportManager.Models.Teams;
-using E_SportManager.Service.Data.Teams;
+﻿using E_SportManager.Service.Data.Teams;
 
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_SportManager.Controllers.Api
@@ -19,7 +17,13 @@ namespace E_SportManager.Controllers.Api
             =>this.teamService = teamService;
 
         [HttpGet]
+        [Route("player")]
         public async Task<TeamImageServiceModel> GetImage(string title)
             =>await teamService.GetImageAsync(title);
+
+        [HttpGet]
+        [Route("team")]
+        public async Task<TeamImageServiceModel> GetTeamImage(string title)
+            => await teamService.GetImageTeamAsync(title);
     }
 }

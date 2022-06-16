@@ -51,6 +51,14 @@ namespace E_SportManager
              .ForMember(
                 x => x.SupportLaner,
                 x => x.MapFrom(x => x.SupportLaner.Name));
+
+            CreateMap<Team, BattleTeamFormModel>()
+              .ForMember(
+                x => x.FirstTeamName,
+                x => x.MapFrom(x => x.Title))
+              .ForMember(
+                x => x.SecondTeamName,
+                x => x.MapFrom(x => x.Title));
         }
     }
 }

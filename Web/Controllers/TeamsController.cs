@@ -203,5 +203,32 @@ namespace E_SportManager.Controllers
 
             return View(team);
         }
+
+        public async Task<IActionResult> Battle() =>View(new BattleTeamFormModel()
+        {
+            FirstTeam= await teamService.GetAllTeamsAsync<TeamServiceModel>(),
+            SecondTeam= await teamService.GetAllTeamsAsync<TeamServiceModel>()
+        });
+
+        [HttpPost]
+        public async Task<IActionResult> Battle(BattleTeamFormModel input)
+        {
+            if (input.FirstTeamName== input.SecondTeamName)
+            {
+                ModelState.AddModelError(nameof(input.FirstTeamName), SameTeamExistingErrorMessage);
+                ModelState.AddModelError(nameof(input.SecondTeamName), SameTeamExistingErrorMessage);
+
+                input.FirstTeam = await teamService.GetAllTeamsAsync<TeamServiceModel>();
+                input.SecondTeam = await teamService.GetAllTeamsAsync<TeamServiceModel>();
+
+                return View(input);
+            }
+
+            var isWon = teamService.GetWiningTeamAsync(input.FirstTeamName, input.SecondTeamName);
+
+            TempData[GlobalMessageKey] = $"You {(isWon.GetAwaiter().GetResult() ? "won" : "lost")} the battle";
+
+            return RedirectToAction(nameof(All));
+        }
     }
 }

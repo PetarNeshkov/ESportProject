@@ -10,6 +10,8 @@ namespace E_SportManager.Service.Data.Teams
 
         Task<TeamImageServiceModel> GetImageAsync(string name);
 
+        Task<TeamImageServiceModel> GetImageTeamAsync(string title);
+
         Task CreateTeamAsync(string title, string imageUrl,string midLaner,
             string topLaner,string jungleLaner,string bottomLaner,
             string supportLaner,string authorId);
@@ -19,6 +21,8 @@ namespace E_SportManager.Service.Data.Teams
         Task<bool> IsExistingAsync(string title,int id);
 
         Task<IEnumerable<TModel>> GetAllTeamsAsync<TModel>(int skip=0);
+
+        Task<IEnumerable<TModel>> GetAllTeamsAsync<TModel>();
 
         Task<int> GetTotalTeamsCountAsync();
 
@@ -33,5 +37,7 @@ namespace E_SportManager.Service.Data.Teams
         Task EditTeamAsync(int id, string title, string imageUrl, string midLaner,
              string topLaner, string jungleLaner, string bottomLaner,
              string supportLaner);
+
+        Task<bool> GetWiningTeamAsync(string firstTeamName,string secondTeamName);
     }
 }
