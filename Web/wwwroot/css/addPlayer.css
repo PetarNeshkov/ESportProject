@@ -163,6 +163,10 @@ main {
     margin-top: -15px;
 }
 
+#vs{
+    font-size:50px;
+    margin-top:64px;
+}
 
 ul.pagination {
     text-align: center;

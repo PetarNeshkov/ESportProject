@@ -175,7 +175,7 @@ var $select = $('#bottom-input').selectize({
     $('#mid-input').change(function(){
           $.ajax({
               type: "GET",
-              url: "/api/images",
+              url: "/api/images/player",
               data:{"title":$("#mid-input").val()},
               success: function (html) {
                  $('#player-mid-image').attr('src', html.imageUrl);
@@ -186,7 +186,7 @@ var $select = $('#bottom-input').selectize({
     $('#bottom-input').change(function(){
           $.ajax({
               type: "GET",
-              url: "/api/images",
+              url: "/api/images/player",
               data:{"title":$("#bottom-input").val()},
               success: function (html) {
                  $('#player-bottom-image').attr('src', html.imageUrl);
@@ -197,7 +197,7 @@ var $select = $('#bottom-input').selectize({
         $('#top-input').change(function(){
           $.ajax({
               type: "GET",
-              url: "/api/images",
+              url: "/api/images/player",
               data:{"title":$("#top-input").val()},
               success: function (html) {
                  $('#player-top-image').attr('src', html.imageUrl);
@@ -208,7 +208,7 @@ var $select = $('#bottom-input').selectize({
         $('#jungle-input').change(function(){
           $.ajax({
               type: "GET",
-              url: "/api/images",
+              url: "/api/images/player",
               data:{"title":$("#jungle-input").val()},
               success: function (html) {
                  $('#player-jungle-image').attr('src', html.imageUrl);
@@ -219,7 +219,7 @@ var $select = $('#bottom-input').selectize({
         $('#support-input').change(function(){
           $.ajax({
               type: "GET",
-              url: "/api/images",
+              url: "/api/images/player",
               data:{"title":$("#support-input").val()},
               success: function (html) {
                  $('#player-support-image').attr('src', html.imageUrl);

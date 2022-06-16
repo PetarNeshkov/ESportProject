@@ -12,13 +12,13 @@ i:{00000000-0000-0000-0000-000000000000}:Data
 i:{8e66b829-8cb6-4505-8a8d-884e4db65c89}:E-SportManager.Data.Models
 i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\bin\debug\net6.0\e-sportmanager.data.models.dll
 ++Dependencies
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:>1101
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>1102
-i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:>1289
-i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:>1126
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1142
-i:{4689184b-4979-4e34-bc23-0431e901a394}:>1290
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1936
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:>1181
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>1107
+i:{8facf92a-d1d0-4f7d-82f1-f95707c19177}:>1105
+i:{1b9b0d4c-554c-4d7e-8714-5ca09c6801e9}:>1106
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1180
+i:{4689184b-4979-4e34-bc23-0431e901a394}:>1292
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1940
 ++enums
 i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.models\enums\
 ++Player.cs
@@ -97,7 +97,7 @@ i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportp
 i:{4689184b-4979-4e34-bc23-0431e901a394}:c:\users\user\desktop\interview\esportproject\services\e-sport.service.provider\microsoft.netcore.app
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\microsoft.netcore.app
 ++Microsoft.Extensions.Identity.Stores (6.0.5)
-i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:>1998
+i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:>1979
 ++E-SportManager.Data.Common
 i:{8673a339-56c4-4ee5-ab37-624adc7ecfba}:c:\users\user\desktop\interview\esportproject\data\e-sportmanager.data.common\bin\debug\net6.0\e-sportmanager.data.common.dll
 i:{8e66b829-8cb6-4505-8a8d-884e4db65c89}:E-SportManager.Data.Common
@@ -135,11 +135,11 @@ i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\.nuget\packages\microsoft
 i:{4689184b-4979-4e34-bc23-0431e901a394}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 ++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.5)
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>2006
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2024
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>2009
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2028
 ++Microsoft.EntityFrameworkCore.SqlServer (6.0.5)
-i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>2002
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2020
+i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:>2007
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2024
 ++E-SportManager.Common
 i:{c30c4952-808d-4f25-97d3-2d20f3533d31}:c:\users\user\desktop\interview\esportproject\globalconstants\e-sportmanager.common\bin\debug\net6.0\e-sportmanager.common.dll
 i:{2043adde-f993-4e77-b625-50e9168a0faa}:E-SportManager.Common
@@ -204,10 +204,10 @@ i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportp
 ++UserService.cs
 i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:c:\users\user\desktop\interview\esportproject\services\e-sportmanager.service.data\users\userservice.cs
 ++AutoMapper (11.0.1)
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>2003
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2025
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1981
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2029
 ++Microsoft.AspNetCore.Mvc.Core (2.2.5)
-i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>2007
+i:{22f9fbc6-6725-4da1-9798-2d581426be8e}:>1984
 ++E-SportManager.Service.Provider
 i:{17e8b6f5-2072-40c7-a26a-f8767319d78c}:E-SportManager.Service.Provider
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\services\e-sport.service.provider\bin\debug\net6.0\e-sportmanager.service.provider.dll
@@ -218,7 +218,7 @@ i:{00000000-0000-0000-0000-000000000000}:Web
 ++E-SportManager.Web
 i:{68840d6a-e447-4e8a-971b-6847109acc13}:E-SportManager.Web
 ++Connected Services 
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1937
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>1941
 ++Properties
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\properties\
 ++wwwroot
@@ -259,16 +259,6 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\controllers\teamscontroller.cs
 ++Infrastructure
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\infrastructure\
-++AddPlayerFormModel.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\addplayerformmodel.cs
-++AllPlayersQueryModel.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\allplayersquerymodel.cs
-++EditPlayerFormModel.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\editplayerformmodel.cs
-++PlayerDetailsViewModel.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\playerdetailsviewmodel.cs
-++PlayerServiceModel.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\playerservicemodel.cs
 ++AddTeamFormModel.cs
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\addteamformmodel.cs
 ++AllTeamsQueryModel.cs
@@ -277,6 +267,8 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\editteamformmodel.cs
 ++EditTeamImageUrlFormModel.cs
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\editteamimageurlformmodel.cs
+++TeamDetailsViewModel.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\teamdetailsviewmodel.cs
 ++TeamServiceModel.cs
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\teamservicemodel.cs
 ++ErrorViewModel.cs
@@ -286,6 +278,10 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\areas\admin\views\
 ++Home
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\home\
+++Index.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\home\index.cshtml
+++Privacy.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\home\privacy.cshtml
 ++All.cshtml
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\players\all.cshtml
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\teams\all.cshtml
@@ -328,7 +324,7 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 ++Program.cs
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\program.cs
 ++SQL Server Express LocalDB (Local) (ConnectionStrings:DefaultConnection)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2034
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2038
 ++launchSettings.json
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\properties\launchsettings.json
 ++serviceDependencies.json
@@ -365,10 +361,16 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\infrastructure\identityoptionsextensions.cs
 ++ServiceCollectionExtensions.cs
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\infrastructure\servicecollectionextensions.cs
-++Index.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\home\index.cshtml
-++Privacy.cshtml
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\home\privacy.cshtml
+++AddPlayerFormModel.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\addplayerformmodel.cs
+++AllPlayersQueryModel.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\allplayersquerymodel.cs
+++EditPlayerFormModel.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\editplayerformmodel.cs
+++PlayerDetailsViewModel.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\playerdetailsviewmodel.cs
+++PlayerServiceModel.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\players\playerservicemodel.cs
 ++_Layout.cshtml.css
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\shared\_layout.cshtml.css
 ++appsettings.Development.json
@@ -396,17 +398,17 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\program files\dotnet\sdk\6.0.202\sdk
 ++Microsoft.AspNetCore.App
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\microsoft.aspnetcore.app
 ++AutoMapper.Extensions.Microsoft.DependencyInjection (11.0.0)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2021
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2025
 ++Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (6.0.5)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2023
-++Microsoft.AspNetCore.Identity.UI (6.0.5)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2028
-++Microsoft.EntityFrameworkCore.Tools (6.0.5)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2026
-++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.5)
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2027
+++Microsoft.AspNetCore.Identity.UI (6.0.5)
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2032
+++Microsoft.EntityFrameworkCore.Tools (6.0.5)
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2030
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.5)
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2031
 ++Swashbuckle.AspNetCore (6.3.0)
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2022
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:>2026
 ++serviceDependencies.local.json
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\properties\servicedependencies.local.json
 ++dist
@@ -678,5 +680,7 @@ i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportp
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
 ++bootstrap.esm.min.js.map
 i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-++TeamDetailsViewModel.cs
-i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\teamdetailsviewmodel.cs
+++BattleTeamFormModel.cs
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\models\teams\battleteamformmodel.cs
+++Battle.cshtml
+i:{c6647f32-3acc-46e0-9704-52026c62974a}:c:\users\user\desktop\interview\esportproject\web\views\teams\battle.cshtml

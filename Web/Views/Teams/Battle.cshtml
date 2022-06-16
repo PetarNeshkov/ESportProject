@@ -1,0 +1,86 @@
+﻿@model BattleTeamFormModel
+
+<link rel="stylesheet" href="/css/addPlayer.css">
+
+<body>
+    <main>
+          <div id="sections">
+            <form id="formH" method="post">
+                <div class="player_section mt-3">
+                    <div class="d-flex" style="justify-content: center; gap: 25px;">
+                        <div id="player" class="player h-50">
+                            <img id="myTeam-image"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                            class="player-img-top img-fluid player-image">
+                            <h5 id="firstTeam" class="player-title text-center mt-3" data-toggle="tooltip">
+                                Empty First Team
+                            </h5>
+                            <div style="text-align: center;">
+                                <label asp-for="FirstTeamName">Your Team</label>
+                                <select asp-for="FirstTeamName" id="myTeam-input" placeholder="Select a your team">
+                                    @foreach (var firstTeam in Model.FirstTeam)
+                                    {
+                                        <option>@firstTeam.Title</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="FirstTeamName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <p id="vs">VS</p>
+                        <div id="player" class="player h-50">
+                            <img id="enemyTeam-image"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                            class="player-img-top img-fluid player-image">
+                            <h5 id="enemyTeam" class="player-title text-center mt-3" data-toggle="tooltip">
+                                Empty Oponent Team
+                            </h5>
+                            <div style="text-align: center;">
+                                 <label asp-for="SecondTeamName">Opponent Team</label>
+                                <select asp-for="SecondTeamName" id="enemyTeam-input" placeholder="Select an opponent team">
+                                    @foreach (var secondTeam in Model.SecondTeam)
+                                    {
+                                        <option>@secondTeam.Title</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="SecondTeamName" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary mt-3 w-100">Battle</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+@section Scripts{
+ <partial name="_ValidationScriptsPartial" />
+
+<script src="~/js/addForm.js" asp-append-version=true></script>
+<script src="~/js/selectize.js" asp-append-version=true></script>
+
+<script>
+     $('#myTeam-input').change(function(){
+          $.ajax({
+              type: "GET",
+              url: "/api/images/team",
+              data:{"title":$("#myTeam-input").val()},
+              success: function (html) {
+                 $('#myTeam-image').attr('src', html.imageUrl);
+              }
+          });
+       });
+
+
+        $('#enemyTeam-input').change(function(){
+          $.ajax({
+              type: "GET",
+              url: "/api/images/team",
+              data:{"title":$("#enemyTeam-input").val()},
+              success: function (html) {
+                 $('#enemyTeam-image').attr('src', html.imageUrl);
+              }
+          });
+       });
+</script>
+}

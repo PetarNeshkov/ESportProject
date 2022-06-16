@@ -48,3 +48,15 @@ $("#support-input").change(function () {
 $("#bottom-input").change(function () {
     $('#player-role-bottom').text($("#bottom-input").val());
 })
+
+$("#role-input").change(function () {
+    $('#player-role').text($("#role-input").val());
+})
+
+$("#myTeam-input").change(function () {
+    $('#firstTeam').text($("#myTeam-input").val());
+})
+
+$("#enemyTeam-input").change(function () {
+    $('#enemyTeam').text($("#enemyTeam-input").val());
+})
