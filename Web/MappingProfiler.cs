@@ -35,6 +35,22 @@ namespace E_SportManager
              .ForMember(
                 x => x.SupportLaner,
                 x => x.MapFrom(x => x.SupportLaner.Name));
+            CreateMap<Team, TeamDetailsViewModel>()
+                 .ForMember(
+                x => x.MidLaner,
+                x => x.MapFrom(x => x.MidLaner.Name))
+             .ForMember(
+                x => x.TopLaner,
+                x => x.MapFrom(x => x.TopLaner.Name))
+             .ForMember(
+                x => x.JungleLaner,
+                x => x.MapFrom(x => x.JungleLaner.Name))
+             .ForMember(
+                x => x.BottomLaner,
+                x => x.MapFrom(x => x.BottomLaner.Name))
+             .ForMember(
+                x => x.SupportLaner,
+                x => x.MapFrom(x => x.SupportLaner.Name));
         }
     }
 }

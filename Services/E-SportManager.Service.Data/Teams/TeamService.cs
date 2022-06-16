@@ -84,6 +84,9 @@ namespace E_SportManager.Service.Data.Teams
         public async Task<bool> IsExistingAsync(string title)
           => await data.Teams.AnyAsync(p => p.Title == title && !p.IsDeleted);
 
+        public async Task<bool> IsExistingAsync(string title, int id)
+          => await data.Teams.AnyAsync(p => p.Title == title && p.Id != id && !p.IsDeleted);
+
         public async Task<IEnumerable<TModel>> GetAllTeamsAsync<TModel>(int skip=0)
             => await data.Teams
                  .AsNoTracking()

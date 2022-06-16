@@ -17,17 +17,20 @@
                         <span id="player-division" class="division-all">@player.Division</span>
                     </li>
                 </ul>
-                @if (player.AuthorId == User.Id() || User.IsAdministrator())
+                @if(User.Identity.IsAuthenticated)
                 {
-                 <form asp-controller="Players" 
-                asp-action="Delete" 
-                asp-route-id="@player.Id" 
-                method="post">
-                <div id="admin-btns">
-                    <a asp-controller="Players" asp-action="Edit" asp-route-id="@player.Id"  class="col-lg-5 btn btn-outline mb-1 mt-3 pl-3" id="edit-btn">Edit</a>
-                    <button asp-controller="Players" asp-action="Delete" asp-route-id="@player.Id" type="submit"  class="col-lg-5 btn btn-outline mb-1 mt-3" id="delete-btn">Delete</button>
-                </div>
-                </form>
+                    @if (player.AuthorId == User.Id() || User.IsAdministrator())
+                    {
+                     <form asp-controller="Players" 
+                    asp-action="Delete" 
+                    asp-route-id="@player.Id" 
+                    method="post">
+                    <div id="admin-btns">
+                        <a asp-controller="Players" asp-action="Edit" asp-route-id="@player.Id"  class="col-lg-5 btn btn-outline mb-1 mt-3 pl-3" id="edit-btn">Edit</a>
+                        <button asp-controller="Players" asp-action="Delete" asp-route-id="@player.Id" type="submit"  class="col-lg-5 btn btn-outline mb-1 mt-3" id="delete-btn">Delete</button>
+                    </div>
+                    </form>
+                    }
                 }
                 <a asp-controller="Players" asp-action="Details" asp-route-id="@player.Id"  class="col-md-12 btn btn-outline mb-4 " id="details-btn">Details</a>
             </div>

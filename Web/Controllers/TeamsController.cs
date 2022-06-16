@@ -154,7 +154,7 @@ namespace E_SportManager.Controllers
                 return View(input);
             }
 
-            var isExisting = await teamService.IsExistingAsync(input.Title);
+            var isExisting = await teamService.IsExistingAsync(input.Title,input.Id);
 
             if (isExisting)
             {
@@ -186,9 +186,22 @@ namespace E_SportManager.Controllers
                 input.BottomLaner,
                 input.SupportLaner);
 
-            TempData[GlobalMessageKey] = "Player was edited successfully!";
+            TempData[GlobalMessageKey] = "Team was edited successfully!";
 
             return RedirectToAction(nameof(All));
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Details(int id)
+        {
+            var team= await teamService.GetByIdAsync<TeamDetailsViewModel>(id);
+
+            if (team==null)
+            {
+                return NotFound();
+            }
+
+            return View(team);
         }
     }
 }

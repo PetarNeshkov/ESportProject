@@ -16,6 +16,8 @@ namespace E_SportManager.Service.Data.Teams
 
         Task<bool> IsExistingAsync(string title);
 
+        Task<bool> IsExistingAsync(string title,int id);
+
         Task<IEnumerable<TModel>> GetAllTeamsAsync<TModel>(int skip=0);
 
         Task<int> GetTotalTeamsCountAsync();
