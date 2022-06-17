@@ -22,5 +22,6 @@
         public string BottomLaner { get; init; }
 
         public string BottomLanerImageUrl { get; init; }
+
     }
 }

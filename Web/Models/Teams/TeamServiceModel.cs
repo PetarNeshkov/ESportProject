@@ -2,7 +2,7 @@
 {
     public class TeamServiceModel
     {
-        public string Id { get; init; }
+        public int Id { get; init; }
 
         public string Title { get; init; }
 

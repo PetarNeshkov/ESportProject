@@ -1,6 +1,7 @@
 ﻿using E_SportManager.Data;
 using E_SportManager.Service.Data;
 using E_SportManager.Service.Data.Players;
+using E_SportManager.Service.Data.Statistics;
 using E_SportManager.Service.Data.Teams;
 using E_SportManager.Service.Data.Users;
 
@@ -53,7 +54,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 .AddSingleton(configuration)
                 .AddScoped<IPlayerService, PlayerService>()
                 .AddScoped<IUserService,UserService>()
-                .AddScoped<ITeamService,TeamService>();
+                .AddScoped<ITeamService,TeamService>()
+                .AddScoped<IStatisticsService,StatisticsService>();
 
             return services;
         }

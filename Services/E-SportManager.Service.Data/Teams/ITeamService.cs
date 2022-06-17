@@ -39,5 +39,11 @@ namespace E_SportManager.Service.Data.Teams
              string supportLaner);
 
         Task<bool> GetWiningTeamAsync(string firstTeamName,string secondTeamName);
+
+        Task<int> GetTeamRatingAsync(int id);
+
+        Task<int> GetWonGamesAsync(int id);
+
+        Task<int> GetLostGamesAsync(int id);
     }
 }

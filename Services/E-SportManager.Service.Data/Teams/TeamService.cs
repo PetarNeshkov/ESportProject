@@ -14,7 +14,7 @@ namespace E_SportManager.Service.Data.Teams
         private readonly ESportDbContext data;
         private readonly IMapper mapper;
 
-        public TeamService(ESportDbContext data,IMapper mapper)
+        public TeamService(ESportDbContext data, IMapper mapper)
         {
             this.data = data;
             this.mapper = mapper;
@@ -22,11 +22,11 @@ namespace E_SportManager.Service.Data.Teams
 
         public async Task<IEnumerable<PlayerListServiceModel>> GetRoleAsync(Role role)
         {
-            var queryablePlayers =  data.Players.AsNoTracking().Where(p=>!p.IsDeleted);
+            var queryablePlayers = data.Players.AsNoTracking().Where(p => !p.IsDeleted);
 
-            queryablePlayers =  role switch
+            queryablePlayers = role switch
             {
-                Role.Mid => queryablePlayers.Where(p=>p.Role==role.ToString()),
+                Role.Mid => queryablePlayers.Where(p => p.Role == role.ToString()),
                 Role.Top => queryablePlayers.Where(p => p.Role == role.ToString()),
                 Role.Bottom => queryablePlayers.Where(p => p.Role == role.ToString()),
                 Role.Jungle => queryablePlayers.Where(p => p.Role == role.ToString()),
@@ -40,7 +40,7 @@ namespace E_SportManager.Service.Data.Teams
 
         public async Task<TeamImageServiceModel> GetImageAsync(string name)
         {
-            var imageUrl= await data.Players
+            var imageUrl = await data.Players
                 .Where(p => p.Name == name)
                 .Select(p => p.ImageUrl)
                 .FirstAsync();
@@ -65,25 +65,25 @@ namespace E_SportManager.Service.Data.Teams
         }
 
         public async Task CreateTeamAsync(
-            string title, 
-            string imageUrl, 
+            string title,
+            string imageUrl,
             string midLaner,
-            string topLaner, 
-            string jungleLaner, 
-            string bottomLaner, 
-            string supportLaner, 
+            string topLaner,
+            string jungleLaner,
+            string bottomLaner,
+            string supportLaner,
             string authorId)
         {
             var team = new Team
             {
-                Title=title,
-                ImageUrl=imageUrl,
-                MidLanerId= await GetPlayerIdAsync(midLaner),
-                TopLanerId= await GetPlayerIdAsync(topLaner),
-                BottomLanerId= await GetPlayerIdAsync(bottomLaner),
-                SupportLanerId= await GetPlayerIdAsync(supportLaner),
-                JungleLanerId= await GetPlayerIdAsync(jungleLaner),
-                AuthorId= authorId
+                Title = title,
+                ImageUrl = imageUrl,
+                MidLanerId = await GetPlayerIdAsync(midLaner),
+                TopLanerId = await GetPlayerIdAsync(topLaner),
+                BottomLanerId = await GetPlayerIdAsync(bottomLaner),
+                SupportLanerId = await GetPlayerIdAsync(supportLaner),
+                JungleLanerId = await GetPlayerIdAsync(jungleLaner),
+                AuthorId = authorId
             };
 
             await data.Teams.AddAsync(team);
@@ -96,7 +96,7 @@ namespace E_SportManager.Service.Data.Teams
         public async Task<bool> IsExistingAsync(string title, int id)
           => await data.Teams.AnyAsync(p => p.Title == title && p.Id != id && !p.IsDeleted);
 
-        public async Task<IEnumerable<TModel>> GetAllTeamsAsync<TModel>(int skip=0)
+        public async Task<IEnumerable<TModel>> GetAllTeamsAsync<TModel>(int skip = 0)
             => await data.Teams
                  .AsNoTracking()
                  .OrderByDescending(p => p.CreatedOn)
@@ -118,7 +118,7 @@ namespace E_SportManager.Service.Data.Teams
 
         public async Task DeleteTeamAsync(int id)
         {
-            var team= await GetByIdAsync(id);
+            var team = await GetByIdAsync(id);
 
             team.IsDeleted = true;
             team.DeletedOn = DateTime.UtcNow.ToLocalTime().ToString("dd/MM/yyyy H:mm");
@@ -128,7 +128,7 @@ namespace E_SportManager.Service.Data.Teams
 
         public async Task<TModel> GetByIdAsync<TModel>(int id)
           => await data.Teams
-              .AsNoTracking()
+              //.AsNoTracking()
               .Where(p => p.Id == id && !p.IsDeleted)
               .ProjectTo<TModel>(mapper.ConfigurationProvider)
               .FirstOrDefaultAsync();
@@ -146,8 +146,8 @@ namespace E_SportManager.Service.Data.Teams
 
         public async Task EditTeamAsync(int id, string title, string imageUrl, string midLaner, string topLaner, string jungleLaner, string bottomLaner, string supportLaner)
         {
-            var team= await GetByIdAsync(id);
-            
+            var team = await GetByIdAsync(id);
+
             team.Title = title;
             team.ImageUrl = imageUrl;
             team.MidLanerId = await GetPlayerIdAsync(midLaner);
@@ -158,16 +158,33 @@ namespace E_SportManager.Service.Data.Teams
 
             await data.SaveChangesAsync();
         }
+        public async Task<int> GetTeamRatingAsync(int id)
+            => await data.Teams
+                .Where(t => t.Id == id)
+                .Select(t => t.Rating)
+                .FirstAsync();
+
+        public async Task<int> GetWonGamesAsync(int id)
+           => await data.Teams
+                 .Where(t => t.Id == id)
+                 .Select(t => t.WonGames)
+                 .FirstAsync();
+
+        public async Task<int> GetLostGamesAsync(int id)
+            => await data.Teams
+                    .Where(t => t.Id == id)
+                    .Select(t => t.LostGames)
+                    .FirstAsync();
 
         public async Task<bool> GetWiningTeamAsync(string firstTeamName, string secondTeamName)
         {
             var myTeam = await GetTeamByNameAsync(firstTeamName);
-            var enemyTeam= await GetTeamByNameAsync(secondTeamName);
+            var enemyTeam = await GetTeamByNameAsync(secondTeamName);
 
             var myTeamPoints = await CalculateTeamPoints(myTeam);
             var enemyTeamPoints = await CalculateTeamPoints(enemyTeam);
 
-            if (myTeamPoints> enemyTeamPoints)
+            if (myTeamPoints > enemyTeamPoints)
             {
                 myTeam.Rating++;
                 myTeam.WonGames++;
@@ -189,14 +206,14 @@ namespace E_SportManager.Service.Data.Teams
 
         private async Task<int> CalculateTeamPoints(Team team)
         {
-            int totalPoints=0;
-            var players=new List<Player>();
+            int totalPoints = 0;
+            var players = new List<Player>();
 
-            var midLaner=await GetPlayerAsync(team.MidLanerId);
-            var topLaner=await GetPlayerAsync(team.TopLanerId);
-            var jungleLaner= await GetPlayerAsync(team.JungleLanerId);
-            var bottomLaner=await GetPlayerAsync(team.BottomLanerId);
-            var supportLaner=await GetPlayerAsync(team.SupportLanerId);
+            var midLaner = await GetPlayerAsync(team.MidLanerId);
+            var topLaner = await GetPlayerAsync(team.TopLanerId);
+            var jungleLaner = await GetPlayerAsync(team.JungleLanerId);
+            var bottomLaner = await GetPlayerAsync(team.BottomLanerId);
+            var supportLaner = await GetPlayerAsync(team.SupportLanerId);
 
             players.Add(midLaner);
             players.Add(topLaner);
@@ -207,21 +224,21 @@ namespace E_SportManager.Service.Data.Teams
             foreach (var player in players)
             {
                 int currPoints = CalculateDivisionPointsAsync(player.Division);
-                totalPoints += CalculateYearsOfExperienceMultiPlier(player.YearsOfExperience,currPoints);
+                totalPoints += CalculateYearsOfExperienceMultiPlier(player.YearsOfExperience, currPoints);
             }
 
             return totalPoints;
         }
 
-        private int CalculateYearsOfExperienceMultiPlier(int yearsOfExperience,int totalPoints)
+        private int CalculateYearsOfExperienceMultiPlier(int yearsOfExperience, int totalPoints)
         {
-            if (yearsOfExperience >= 2 && yearsOfExperience < 5) 
-                totalPoints=(int)Math.Round(totalPoints*1.2);
-            else if(yearsOfExperience >= 5 && yearsOfExperience < 8)
+            if (yearsOfExperience >= 2 && yearsOfExperience < 5)
+                totalPoints = (int)Math.Round(totalPoints * 1.2);
+            else if (yearsOfExperience >= 5 && yearsOfExperience < 8)
                 totalPoints = (int)Math.Round(totalPoints * 1.4);
-            else if(yearsOfExperience >= 8 && yearsOfExperience < 10)
+            else if (yearsOfExperience >= 8 && yearsOfExperience < 10)
                 totalPoints = (int)Math.Round(totalPoints * 1.5);
-            else if(yearsOfExperience>=10)
+            else if (yearsOfExperience >= 10)
                 totalPoints = (int)Math.Round(totalPoints * 1.8);
 
             return totalPoints;
@@ -244,17 +261,18 @@ namespace E_SportManager.Service.Data.Teams
         }
 
         private async Task<Team> GetTeamByNameAsync(string firstTeamName)
-           =>await data.Teams.Where(t=>t.Title==firstTeamName).FirstAsync();
+           => await data.Teams.Where(t => t.Title == firstTeamName).FirstAsync();
 
         private async Task<int> GetPlayerIdAsync(string name)
             => await data.Players
-                .Where(p=>p.Name==name)
-                .Select(x=>x.Id)
+                .Where(p => p.Name == name)
+                .Select(x => x.Id)
                 .FirstAsync();
 
         private async Task<Player> GetPlayerAsync(int id)
            => await data.Players
                .Where(p => p.Id == id)
                .FirstAsync();
+
     }
 }

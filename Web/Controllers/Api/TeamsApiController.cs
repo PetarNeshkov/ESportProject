@@ -7,7 +7,6 @@ namespace E_SportManager.Controllers.Api
 {
     [Authorize]
     [ApiController]
-  
     [Route("api/images")]
     public class TeamsApiController : ControllerBase
     {
